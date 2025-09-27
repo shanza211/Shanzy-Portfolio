@@ -150,8 +150,11 @@ export default function About() {
                   combining beautiful interfaces with robust backend systems.
                 </p>
                 <p className='text-gray-300 text-lg leading-relaxed mb-6'>
-
-A turning point in my journey was the guidance of my amazing mentors—Sir Suheer and Sir Burhan. Their teaching, support, and encouragement not only helped me master design and development but also inspired me to believe in my potential. I consider them the best teachers I could have asked for, and I owe much of my growth to their mentorship.
+                  A turning point in my journey was the guidance of my
+                  incredible mentors—Sir Suheer and Sir Burhan. Their wisdom,
+                  support, and motivation not only helped me excel in design and
+                  development but also inspired me to believe in myself. I truly
+                  consider them the best teachers I could have wished for.
                 </p>
                 <p className='text-gray-300 text-lg leading-relaxed'>
                   Today, I continue to push the boundaries of what's possible in
