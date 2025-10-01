@@ -124,31 +124,29 @@ export default function Projects() {
   };
 
   return (
-    <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-16'
-        >
-          <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-            My{' '}
-            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
-              Projects
-            </span>
-          </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            A collection of my work spanning UI/UX design, web development,
-            mobile applications, and Python projects. Each project represents a
-            unique challenge and creative solution.
-          </p>
-        </motion.div>
+    <div className='min-h-screen pt-20'>
+      {/* Hero Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className='text-center mb-16'
+          >
+            <h1 className='section-title text-4xl md:text-5xl font-bold mb-6'>
+              My Projects
+            </h1>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              A collection of my work spanning UI/UX design, web development, mobile
+              applications, and Python projects. Each project represents a unique challenge
+              and creative solution.
+            </p>
+          </motion.div>
 
-        {/* Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          {/* Filters */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className='flex flex-wrap justify-center gap-4 mb-12'
@@ -159,11 +157,11 @@ export default function Projects() {
               onClick={() => setActiveFilter(filter.id)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
-                  : 'glass text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
+                                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                    activeFilter === filter.id
+                      ? 'gradient-button text-white shadow-lg'
+                      : 'glass-card text-gray-300 hover:text-white hover:bg-white/10'
+                  }`}
             >
               {filter.label}
             </motion.button>
@@ -311,7 +309,8 @@ export default function Projects() {
             </motion.a>
           </div>
         </motion.section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -103,39 +103,30 @@ export default function About() {
   ];
 
   return (
-    <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-6xl mx-auto'>
-        {/* Hero Section (Original Centered Layout) */}
+    <div className='min-h-screen pt-20'>
+      {/* Hero Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <motion.div
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-          className='text-center mb-20'
+          className='max-w-6xl mx-auto'
         >
-          <motion.div variants={itemVariants} className='mb-8'>
-            <div className='w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-4xl mb-6'>
-              👨‍💻
-            </div>
-            <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              About{' '}
-              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
-                Shanzy
-              </span>
+          <motion.div variants={itemVariants} className='text-center mb-16'>
+            <h1 className='section-title text-4xl md:text-5xl font-bold mb-6'>
+              About Me
             </h1>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-              I'm a passionate UI/UX designer and Python developer with over 4
-              years of experience creating beautiful, functional digital
-              experiences. I specialize in modern design systems, glassmorphism
-              aesthetics, and building scalable web applications.
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Passionate designer and developer creating meaningful digital experiences
+              that bridge the gap between beautiful design and functional technology.
             </p>
           </motion.div>
-        </motion.div>
 
-        {/* Story Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          {/* Story Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -352,7 +343,8 @@ export default function About() {
             </motion.a>
           </div>
         </motion.section>
-      </div>
+        </motion.div>
+      </section>
     </div>
   );
 }

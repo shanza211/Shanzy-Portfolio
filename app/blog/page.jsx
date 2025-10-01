@@ -143,35 +143,33 @@ export default function Blog() {
   };
 
   return (
-    <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-16'
-        >
-          <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
-              Blog
-            </span>{' '}
-            & Insights
-          </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Thoughts, tutorials, and insights on design, development, and the
-            intersection of creativity and technology.
-          </p>
-        </motion.div>
+    <div className='min-h-screen pt-20'>
+      {/* Hero Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className='text-center mb-16'
+          >
+            <h1 className='section-title text-4xl md:text-5xl font-bold mb-6'>
+              Blog & Insights
+            </h1>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Sharing knowledge, experiences, and insights about design,
+              development, and the latest trends in technology.
+            </p>
+          </motion.div>
 
-        {/* Search and Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className='mb-12'
-        >
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+          {/* Search and Filter */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className='mb-12'
+          >
+            <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
             {/* Search */}
             <div className='relative w-full lg:w-96'>
               <input
@@ -179,7 +177,7 @@ export default function Blog() {
                 placeholder='Search articles...'
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className='w-full px-4 py-3 pl-12 glass rounded-xl text-white placeholder-gray-400 border border-white/10 focus:border-blue-500/50 focus:outline-none transition-colors duration-200'
+                className='w-full px-4 py-3 pl-12 glass-card rounded-xl text-white placeholder-gray-400 border border-white/10 focus:border-purple-500/50 focus:outline-none transition-colors duration-200'
               />
               <svg
                 className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400'
@@ -202,10 +200,10 @@ export default function Blog() {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
-                      : 'glass text-gray-300 hover:text-white hover:bg-white/10'
+                      ? 'gradient-button text-white'
+                      : 'glass-card text-gray-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {category.label}
@@ -419,7 +417,8 @@ export default function Blog() {
             </div>
           </div>
         </motion.section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

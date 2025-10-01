@@ -153,33 +153,30 @@ export default function Contact() {
   };
 
   return (
-    <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-16'
-        >
-          <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-            Let's{' '}
-            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
-              Connect
-            </span>
-          </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Ready to bring your ideas to life? I'd love to hear about your
-            project and explore how we can work together to create something
-            amazing.
-          </p>
-        </motion.div>
-
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20'>
-          {/* Contact Form */}
+    <div className='min-h-screen pt-20'>
+      {/* Hero Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
           <motion.div
-            variants={containerVariants}
-            initial='hidden'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className='text-center mb-16'
+          >
+            <h1 className='section-title text-4xl md:text-5xl font-bold mb-6'>
+              Let's Work Together
+            </h1>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Have a project in mind? I'd love to hear about it. Let's discuss how
+              we can bring your ideas to life with exceptional design and development.
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20'>
+            {/* Contact Form */}
+            <motion.div
+              variants={containerVariants}
+              initial='hidden'
             animate='visible'
             className='glass-card p-8 rounded-3xl'
           >
@@ -557,7 +554,8 @@ export default function Contact() {
             </div>
           </div>
         </motion.section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
