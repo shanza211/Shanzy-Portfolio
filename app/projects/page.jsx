@@ -138,177 +138,177 @@ export default function Projects() {
               My Projects
             </h1>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              A collection of my work spanning UI/UX design, web development, mobile
-              applications, and Python projects. Each project represents a unique challenge
-              and creative solution.
+              A collection of my work spanning UI/UX design, web development,
+              mobile applications, and Python projects. Each project represents
+              a unique challenge and creative solution.
             </p>
           </motion.div>
 
           {/* Filters */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className='flex flex-wrap justify-center gap-4 mb-12'
-        >
-          {filters.map((filter) => (
-            <motion.button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-                                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                    activeFilter === filter.id
-                      ? 'gradient-button text-white shadow-lg'
-                      : 'glass-card text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-            >
-              {filter.label}
-            </motion.button>
-          ))}
-        </motion.div>
-
-        {/* Projects Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial='hidden'
-          animate='visible'
-          layout
-          className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'
-        >
-          {filteredProjects.map((project) => (
-            <motion.div
-              key={project.id}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Empty State */}
-        {filteredProjects.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className='text-center py-20'
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className='flex flex-wrap justify-center gap-4 mb-12'
           >
-            <div className='text-6xl mb-4'>🔍</div>
-            <h3 className='text-xl font-semibold text-white mb-2'>
-              No projects found
-            </h3>
-            <p className='text-gray-400'>
-              Try adjusting your filter selection.
-            </p>
+            {filters.map((filter) => (
+              <motion.button
+                key={filter.id}
+                onClick={() => setActiveFilter(filter.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeFilter === filter.id
+                    ? 'gradient-button text-white shadow-lg'
+                    : 'glass-card text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {filter.label}
+              </motion.button>
+            ))}
           </motion.div>
-        )}
 
-        {/* Stats Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className='mt-20 glass-card p-12 rounded-3xl'
-        >
-          <h2 className='text-3xl font-bold text-white mb-8 text-center'>
-            Project Statistics
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            <div className='text-center'>
+          {/* Projects Grid */}
+          <motion.div
+            variants={containerVariants}
+            initial='hidden'
+            animate='visible'
+            layout
+            className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'
+          >
+            {filteredProjects.map((project) => (
               <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className='text-4xl font-bold text-blue-400 mb-2'
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3 }}
               >
-                {projects.length}+
+                <ProjectCard project={project} />
               </motion.div>
-              <p className='text-gray-400'>Total Projects</p>
-            </div>
-            <div className='text-center'>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className='text-4xl font-bold text-cyan-400 mb-2'
-              >
-                {projects.reduce((sum, project) => sum + project.likes, 0)}+
-              </motion.div>
-              <p className='text-gray-400'>Total Likes</p>
-            </div>
-            <div className='text-center'>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className='text-4xl font-bold text-purple-400 mb-2'
-              >
-                4+
-              </motion.div>
-              <p className='text-gray-400'>Categories</p>
-            </div>
-            <div className='text-center'>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className='text-4xl font-bold text-green-400 mb-2'
-              >
-                100%
-              </motion.div>
-              <p className='text-gray-400'>Client Satisfaction</p>
-            </div>
-          </div>
-        </motion.section>
+            ))}
+          </motion.div>
 
-        {/* CTA Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className='mt-20 text-center'
-        >
-          <div className='glass-card p-12 rounded-3xl'>
-            <h2 className='text-3xl font-bold text-white mb-6'>
-              Like what you see?
-            </h2>
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              I'm always excited to work on new projects and bring creative
-              ideas to life. Let's discuss how we can collaborate.
-            </p>
-            <motion.a
-              href='/contact'
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25'
+          {/* Empty State */}
+          {filteredProjects.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className='text-center py-20'
             >
-              Start a Project
-              <svg
-                className='ml-2 w-5 h-5'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
+              <div className='text-6xl mb-4'>🔍</div>
+              <h3 className='text-xl font-semibold text-white mb-2'>
+                No projects found
+              </h3>
+              <p className='text-gray-400'>
+                Try adjusting your filter selection.
+              </p>
+            </motion.div>
+          )}
+
+          {/* Stats Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mt-20 glass-card p-12 rounded-3xl'
+          >
+            <h2 className='text-3xl font-bold text-white mb-8 text-center'>
+              Project Statistics
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+              <div className='text-center'>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className='text-4xl font-bold text-blue-400 mb-2'
+                >
+                  {projects.length}+
+                </motion.div>
+                <p className='text-gray-400'>Total Projects</p>
+              </div>
+              <div className='text-center'>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className='text-4xl font-bold text-cyan-400 mb-2'
+                >
+                  {projects.reduce((sum, project) => sum + project.likes, 0)}+
+                </motion.div>
+                <p className='text-gray-400'>Total Likes</p>
+              </div>
+              <div className='text-center'>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className='text-4xl font-bold text-purple-400 mb-2'
+                >
+                  4+
+                </motion.div>
+                <p className='text-gray-400'>Categories</p>
+              </div>
+              <div className='text-center'>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className='text-4xl font-bold text-green-400 mb-2'
+                >
+                  100%
+                </motion.div>
+                <p className='text-gray-400'>Client Satisfaction</p>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* CTA Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mt-20 text-center'
+          >
+            <div className='glass-card p-12 rounded-3xl'>
+              <h2 className='text-3xl font-bold text-white mb-6'>
+                Like what you see?
+              </h2>
+              <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+                I'm always excited to work on new projects and bring creative
+                ideas to life. Let's discuss how we can collaborate.
+              </p>
+              <motion.a
+                href='/contact'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25'
               >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M17 8l4 4m0 0l-4 4m4-4H3'
-                />
-              </svg>
-            </motion.a>
-          </div>
-        </motion.section>
+                Start a Project
+                <svg
+                  className='ml-2 w-5 h-5'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M17 8l4 4m0 0l-4 4m4-4H3'
+                  />
+                </svg>
+              </motion.a>
+            </div>
+          </motion.section>
         </div>
       </section>
     </div>

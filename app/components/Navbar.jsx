@@ -28,16 +28,27 @@ export default function Navbar() {
     <>
       <style jsx>{`
         @keyframes gradient-shift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
-        
+
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-2px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-2px);
+          }
         }
-        
+
         .gradient-text {
           background: linear-gradient(-45deg, #60a5fa, #a78bfa, #34d399);
           background-size: 300% 300%;
@@ -46,7 +57,7 @@ export default function Navbar() {
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
-        
+
         .floating {
           animation: float 2s ease-in-out infinite;
         }
@@ -55,29 +66,28 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ 
-          duration: 0.8, 
+        transition={{
+          duration: 0.8,
           ease: [0.25, 0.46, 0.45, 0.94],
-          delay: 0.1 
+          delay: 0.1,
         }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'glass-nav shadow-lg border-b border-white/10' 
+          isScrolled
+            ? 'glass-nav shadow-lg border-b border-white/10'
             : 'glass-nav'
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-14'>
-            
             {/* Logo Section */}
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ 
-                duration: 0.6, 
+              transition={{
+                duration: 0.6,
                 delay: 0.2,
-                type: "spring",
-                stiffness: 200 
+                type: 'spring',
+                stiffness: 200,
               }}
               whileHover={{ scale: 1.05 }}
               className='flex items-center gap-3 floating cursor-pointer'
@@ -92,10 +102,10 @@ export default function Navbar() {
                   <span className='text-sm font-bold text-white'>S</span>
                 </div>
               </motion.div>
-              
+
               {/* Name and Title */}
               <div className='flex flex-col'>
-                <motion.h1 
+                <motion.h1
                   className='text-lg font-bold gradient-text glow-effect'
                   whileHover={{ scale: 1.05 }}
                 >
@@ -106,7 +116,7 @@ export default function Navbar() {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -130,24 +140,24 @@ export default function Navbar() {
                     <motion.span
                       whileHover={{ scale: 1.2, rotate: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="text-xs"
+                      className='text-xs'
                     >
                       {item.icon}
                     </motion.span>
-                    
+
                     <motion.span
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                     >
                       {item.label}
                     </motion.span>
-                    
+
                     {/* Active indicator */}
                     {pathname === item.href && (
                       <motion.div
-                        layoutId="activeNav"
-                        className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-500/30"
-                        transition={{ type: "spring", duration: 0.6 }}
+                        layoutId='activeNav'
+                        className='absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-500/30'
+                        transition={{ type: 'spring', duration: 0.6 }}
                       />
                     )}
                   </Link>
@@ -159,11 +169,11 @@ export default function Navbar() {
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ 
-                duration: 0.6, 
+              transition={{
+                duration: 0.6,
                 delay: 0.5,
-                type: "spring",
-                stiffness: 200 
+                type: 'spring',
+                stiffness: 200,
               }}
               className='hidden md:flex items-center gap-2'
             >
@@ -180,7 +190,7 @@ export default function Navbar() {
                   Sign In
                 </Link>
               </motion.div>
-              
+
               {/* Sign Up Button */}
               <motion.div
                 whileHover={{ scale: 1.05, y: -1 }}
@@ -206,7 +216,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <div className="w-5 h-5 relative">
+              <div className='w-5 h-5 relative'>
                 <motion.span
                   animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
                   className='absolute top-1 left-0 w-5 h-0.5 bg-white rounded-full'
@@ -218,7 +228,9 @@ export default function Navbar() {
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                  animate={
+                    isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
+                  }
                   className='absolute top-4 left-0 w-5 h-0.5 bg-white rounded-full'
                   transition={{ duration: 0.3 }}
                 />
@@ -253,9 +265,9 @@ export default function Navbar() {
                 {navItems.map((item) => (
                   <motion.div
                     key={item.href}
-                    variants={{ 
-                      hidden: { x: -20, opacity: 0 }, 
-                      visible: { x: 0, opacity: 1 } 
+                    variants={{
+                      hidden: { x: -20, opacity: 0 },
+                      visible: { x: 0, opacity: 1 },
                     }}
                   >
                     <Link
@@ -267,18 +279,18 @@ export default function Navbar() {
                           : 'text-slate-300 hover:bg-slate-700/30 hover:text-white'
                       }`}
                     >
-                      <span className="text-base">{item.icon}</span>
+                      <span className='text-base'>{item.icon}</span>
                       {item.label}
                     </Link>
                   </motion.div>
                 ))}
-                
+
                 <motion.div
-                  variants={{ 
-                    hidden: { x: -20, opacity: 0 }, 
-                    visible: { x: 0, opacity: 1 } 
+                  variants={{
+                    hidden: { x: -20, opacity: 0 },
+                    visible: { x: 0, opacity: 1 },
                   }}
-                  className="flex flex-col gap-2 pt-4"
+                  className='flex flex-col gap-2 pt-4'
                 >
                   <Link
                     href='/signin'

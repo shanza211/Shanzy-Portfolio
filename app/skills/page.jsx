@@ -34,8 +34,8 @@ export default function Skills() {
         { name: 'Adobe Photoshop', level: 92, icon: '🖌️' },
         { name: 'Adobe Illustrator', level: 88, icon: '✏️' },
         { name: 'Sketch', level: 85, icon: '📝' },
-        { name: 'Prototyping', level: 90, icon: '⚡' }
-      ]
+        { name: 'Prototyping', level: 90, icon: '⚡' },
+      ],
     },
     {
       title: 'Frontend Development',
@@ -46,8 +46,8 @@ export default function Skills() {
         { name: 'CSS3/SCSS', level: 90, icon: '🎨' },
         { name: 'JavaScript', level: 88, icon: '⚡' },
         { name: 'TypeScript', level: 82, icon: '📘' },
-        { name: 'Tailwind CSS', level: 92, icon: '🌊' }
-      ]
+        { name: 'Tailwind CSS', level: 92, icon: '🌊' },
+      ],
     },
     {
       title: 'Backend Development',
@@ -58,8 +58,8 @@ export default function Skills() {
         { name: 'Node.js', level: 80, icon: '🟢' },
         { name: 'REST APIs', level: 88, icon: '🔗' },
         { name: 'Database Design', level: 85, icon: '🗄️' },
-        { name: 'PostgreSQL/MongoDB', level: 83, icon: '💾' }
-      ]
+        { name: 'PostgreSQL/MongoDB', level: 83, icon: '💾' },
+      ],
     },
     {
       title: 'Tools & Technologies',
@@ -70,32 +70,33 @@ export default function Skills() {
         { name: 'WordPress', level: 88, icon: '🌐' },
         { name: 'Docker', level: 75, icon: '🐳' },
         { name: 'AWS/Cloud', level: 78, icon: '☁️' },
-        { name: 'Agile/Scrum', level: 85, icon: '🔄' }
-      ]
-    }
+        { name: 'Agile/Scrum', level: 85, icon: '🔄' },
+      ],
+    },
   ];
 
   const achievements = [
     {
       icon: '🏆',
       title: '50+ Projects Completed',
-      description: 'Successfully delivered diverse projects across multiple industries'
+      description:
+        'Successfully delivered diverse projects across multiple industries',
     },
     {
       icon: '⭐',
       title: '100% Client Satisfaction',
-      description: 'Maintaining excellent relationships with all clients'
+      description: 'Maintaining excellent relationships with all clients',
     },
     {
       icon: '🚀',
       title: '3+ Years Experience',
-      description: 'Continuous learning and growth in design and development'
+      description: 'Continuous learning and growth in design and development',
     },
     {
       icon: '💡',
       title: 'Innovation Focused',
-      description: 'Always exploring new technologies and design trends'
-    }
+      description: 'Always exploring new technologies and design trends',
+    },
   ];
 
   const certifications = [
@@ -103,26 +104,26 @@ export default function Skills() {
       title: 'Google UX Design Certificate',
       issuer: 'Google',
       year: '2023',
-      icon: '🎓'
+      icon: '🎓',
     },
     {
       title: 'Python for Data Science',
       issuer: 'IBM',
       year: '2022',
-      icon: '📊'
+      icon: '📊',
     },
     {
       title: 'React Developer Certification',
       issuer: 'Meta',
       year: '2023',
-      icon: '⚛️'
+      icon: '⚛️',
     },
     {
       title: 'AWS Cloud Practitioner',
       issuer: 'Amazon',
       year: '2023',
-      icon: '☁️'
-    }
+      icon: '☁️',
+    },
   ];
 
   return (
@@ -140,7 +141,7 @@ export default function Skills() {
               Skills & Expertise
             </h1>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto mb-12'>
-              A comprehensive overview of my technical skills, design expertise, 
+              A comprehensive overview of my technical skills, design expertise,
               and professional achievements in the digital space.
             </p>
           </motion.div>
@@ -157,9 +158,15 @@ export default function Skills() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className='hero-stats py-6'
               >
-                <div className='text-3xl mb-3 pulse-glow'>{achievement.icon}</div>
-                <h3 className='text-lg font-bold gradient-text mb-2'>{achievement.title}</h3>
-                <p className='text-sm text-gray-400'>{achievement.description}</p>
+                <div className='text-3xl mb-3 pulse-glow'>
+                  {achievement.icon}
+                </div>
+                <h3 className='text-lg font-bold gradient-text mb-2'>
+                  {achievement.title}
+                </h3>
+                <p className='text-sm text-gray-400'>
+                  {achievement.description}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -195,8 +202,12 @@ export default function Skills() {
                 className='skill-card p-8 rounded-2xl'
               >
                 <div className='flex items-center mb-8'>
-                  <div className='text-3xl mr-4 pulse-glow'>{category.icon}</div>
-                  <h3 className='text-2xl font-bold gradient-text'>{category.title}</h3>
+                  <div className='text-3xl mr-4 pulse-glow'>
+                    {category.icon}
+                  </div>
+                  <h3 className='text-2xl font-bold gradient-text'>
+                    {category.title}
+                  </h3>
                 </div>
 
                 <div className='space-y-6'>
@@ -212,15 +223,22 @@ export default function Skills() {
                       <div className='flex items-center justify-between mb-2'>
                         <div className='flex items-center'>
                           <span className='text-lg mr-3'>{skill.icon}</span>
-                          <span className='text-white font-medium'>{skill.name}</span>
+                          <span className='text-white font-medium'>
+                            {skill.name}
+                          </span>
                         </div>
-                        <span className='text-sm gradient-text font-semibold'>{skill.level}%</span>
+                        <span className='text-sm gradient-text font-semibold'>
+                          {skill.level}%
+                        </span>
                       </div>
                       <div className='w-full bg-white/10 rounded-full h-2 overflow-hidden'>
                         <motion.div
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1.5, delay: skillIndex * 0.1 }}
+                          transition={{
+                            duration: 1.5,
+                            delay: skillIndex * 0.1,
+                          }}
                           viewport={{ once: true }}
                           className='progress-bar h-2'
                         />
@@ -248,7 +266,8 @@ export default function Skills() {
               Certifications & Learning
             </h2>
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
-              Continuous professional development through recognized certifications
+              Continuous professional development through recognized
+              certifications
             </p>
           </motion.div>
 
@@ -264,7 +283,9 @@ export default function Skills() {
                 className='glass-card p-6 rounded-2xl text-center'
               >
                 <div className='text-3xl mb-4 pulse-glow'>{cert.icon}</div>
-                <h3 className='text-lg font-semibold text-white mb-2'>{cert.title}</h3>
+                <h3 className='text-lg font-semibold text-white mb-2'>
+                  {cert.title}
+                </h3>
                 <p className='text-gray-400 text-sm mb-2'>{cert.issuer}</p>
                 <span className='inline-block px-3 py-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-purple-300 text-xs rounded-full'>
                   {cert.year}
@@ -289,8 +310,8 @@ export default function Skills() {
               Let's Build Something Amazing
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Ready to leverage these skills for your next project? 
-              Let's discuss how I can help bring your vision to life.
+              Ready to leverage these skills for your next project? Let's
+              discuss how I can help bring your vision to life.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a

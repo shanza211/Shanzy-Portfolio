@@ -1,6 +1,6 @@
 export default function sitemap() {
-  const baseUrl = 'https://shanzy-portfolio.vercel.app'
-  
+  const baseUrl = 'https://shanzy-portfolio.vercel.app';
+
   return [
     {
       url: baseUrl,
@@ -44,5 +44,5 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-  ]
+  ];
 }

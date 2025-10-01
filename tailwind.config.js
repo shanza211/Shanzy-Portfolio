@@ -12,12 +12,12 @@ module.exports = {
         'glass-border': 'rgba(255, 255, 255, 0.06)',
       },
       backdropBlur: {
-        'xs': '2px',
+        xs: '2px',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.6s ease-out',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        glow: 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
@@ -36,4 +36,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

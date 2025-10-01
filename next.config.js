@@ -7,6 +7,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

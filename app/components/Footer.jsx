@@ -69,7 +69,6 @@ export default function Footer() {
     <footer className='relative mt-20'>
       <div className='glass-card border-t border-white/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-          
           {/* Newsletter Section - Top of Footer */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,11 +84,21 @@ export default function Footer() {
               viewport={{ once: true }}
               className='w-12 h-12 mx-auto mb-6 bg-gradient-to-br from-blue-400 via-purple-500 to-green-400 rounded-xl flex items-center justify-center'
             >
-              <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
+              <svg
+                className='w-6 h-6 text-white'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
+                />
               </svg>
             </motion.div>
-            
+
             <motion.h3
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +108,7 @@ export default function Footer() {
             >
               Stay Updated with Latest Insights
             </motion.h3>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -107,9 +116,10 @@ export default function Footer() {
               viewport={{ once: true }}
               className='text-gray-400 mb-8 max-w-2xl mx-auto'
             >
-              Get exclusive web development tips, tutorials, and project updates delivered to your inbox.
+              Get exclusive web development tips, tutorials, and project updates
+              delivered to your inbox.
             </motion.p>
-            
+
             <motion.form
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,13 +143,23 @@ export default function Footer() {
                 type='submit'
                 className='gradient-button px-6 py-3 rounded-lg text-white font-medium shadow-lg flex items-center gap-2 justify-center'
               >
-                <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
+                <svg
+                  className='w-4 h-4'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
+                  />
                 </svg>
                 Subscribe
               </motion.button>
             </motion.form>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -147,7 +167,8 @@ export default function Footer() {
               viewport={{ once: true }}
               className='text-xs text-gray-500 mt-4'
             >
-              🔒 We respect your privacy. Unsubscribe at any time.<br />
+              🔒 We respect your privacy. Unsubscribe at any time.
+              <br />
               By subscribing, you agree to receive emails from Shanzy.
             </motion.p>
           </motion.div>

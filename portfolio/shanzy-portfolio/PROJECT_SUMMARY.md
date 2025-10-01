@@ -7,6 +7,7 @@ I've successfully created a modern, professional portfolio website for Shanzy wi
 ### ✅ Completed Features
 
 #### **Tech Stack (As Requested)**
+
 - ✅ Next.js 14 with App Router
 - ✅ React 18
 - ✅ Tailwind CSS v4 with custom glassmorphism utilities
@@ -15,6 +16,7 @@ I've successfully created a modern, professional portfolio website for Shanzy wi
 - ✅ Best practices for file/folder structure
 
 #### **Design (As Requested)**
+
 - ✅ Black modern theme with glassmorphism effects
 - ✅ Frosted-glass style cards, sections, navbar, and footer
 - ✅ Responsive design for desktop, tablet, and mobile
@@ -22,6 +24,7 @@ I've successfully created a modern, professional portfolio website for Shanzy wi
 - ✅ Custom CSS utilities for glass effects
 
 #### **Pages (As Requested)**
+
 - ✅ Home - Hero section with skills and featured projects
 - ✅ About - Professional experience, tools, and values
 - ✅ Projects - Portfolio showcase with filtering and likes
@@ -31,18 +34,21 @@ I've successfully created a modern, professional portfolio website for Shanzy wi
 - ✅ Terms of Service - Legal terms and conditions
 
 #### **Components (As Requested)**
+
 - ✅ Navbar - Sticky, glassmorphism with smooth animations
 - ✅ Footer - Modern, glass style with social media icons
 - ✅ ProjectCard - Title, description, like button, hover effects
 - ✅ SEO Component - Complete metadata management
 
 #### **Animations (As Requested)**
+
 - ✅ Framer Motion integration throughout
 - ✅ Fade-ins, slides, and hover transitions
 - ✅ Smooth page transitions and micro-interactions
 - ✅ Optimistic UI updates for likes
 
 #### **Performance & SEO (As Requested)**
+
 - ✅ Image optimization setup (next/image)
 - ✅ Code splitting (automatic with Next.js)
 - ✅ Lazy loading components
@@ -52,6 +58,7 @@ I've successfully created a modern, professional portfolio website for Shanzy wi
 - ✅ Accessibility features (ARIA labels, semantic HTML)
 
 #### **Backend Integration (As Requested)**
+
 - ✅ Contact form API endpoint (/api/contact)
 - ✅ Project likes API (/api/projects/[id]/like)
 - ✅ Optimistic updates with SWR
@@ -93,12 +100,14 @@ shanzy-portfolio/
 ## 🎨 Design System
 
 ### **Color Palette**
+
 - **Primary**: Blue (#0ea5e9) to Cyan (#06b6d4) gradients
 - **Background**: Black (#000000) with subtle gradients
 - **Glass Effects**: White with 3-10% opacity + backdrop blur
 - **Text**: White with varying opacity (100%, 80%, 60%, 40%)
 
 ### **Glassmorphism Classes**
+
 ```css
 .glass {
   background: rgba(255, 255, 255, 0.05);
@@ -116,18 +125,22 @@ shanzy-portfolio/
 ## 🚀 Getting Started
 
 ### **Installation**
+
 ```bash
 cd shanzy-portfolio
 npm install
 ```
 
 ### **Development**
+
 ```bash
 npm run dev
 ```
+
 Open http://localhost:3000
 
 ### **Build for Production**
+
 ```bash
 npm run build
 npm start
@@ -146,36 +159,40 @@ The contact form is ready for email integration. To enable:
 3. **Update the API route** in `app/api/contact/route.js`
 
 ### **Example SendGrid Integration**:
-```javascript
-import sgMail from '@sendgrid/mail'
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+```javascript
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const msg = {
   to: 'hello@shanzy.dev',
   from: 'contact@shanzy.dev',
   subject: `Portfolio Contact: ${subject}`,
   text: message,
-  html: `<strong>From:</strong> ${name} (${email})<br><br>${message}`
-}
+  html: `<strong>From:</strong> ${name} (${email})<br><br>${message}`,
+};
 
-await sgMail.send(msg)
+await sgMail.send(msg);
 ```
 
 ## 🎯 Customization Guide
 
 ### **Content Updates**
+
 1. **Personal Info**: Update content in each page file
 2. **Projects**: Modify projects array in `app/projects/page.jsx`
 3. **Blog Posts**: Update blogPosts array in `app/blog/page.jsx`
 4. **Contact Details**: Update info in `app/contact/page.jsx`
 
 ### **Styling Changes**
+
 1. **Colors**: Modify `tailwind.config.js`
 2. **Glass Effects**: Update utilities in `app/globals.css`
 3. **Animations**: Adjust Framer Motion configs in components
 
 ### **Adding Features**
+
 1. **New Pages**: Create folders in `app/` with `page.jsx`
 2. **Components**: Add to `app/components/`
 3. **API Endpoints**: Create in `app/api/`
@@ -183,11 +200,13 @@ await sgMail.send(msg)
 ## 🌐 Deployment
 
 ### **Vercel (Recommended)**
+
 1. Push to GitHub
 2. Connect repository to Vercel
 3. Deploy automatically
 
 ### **Environment Variables for Production**
+
 ```
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
 SENDGRID_API_KEY=your_sendgrid_key
@@ -223,6 +242,7 @@ CONTACT_EMAIL=your_email@domain.com
 ## 🎉 Ready to Use!
 
 Your portfolio is now complete with all requested features:
+
 - ✅ Modern glassmorphism design
 - ✅ Smooth animations and interactions
 - ✅ Complete page structure

@@ -55,18 +55,20 @@ shanzy-portfolio/
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/shanzy/portfolio.git
 cd shanzy-portfolio
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -76,6 +78,7 @@ pnpm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -91,6 +94,7 @@ pnpm dev
 ### Colors and Themes
 
 The color scheme is defined in `tailwind.config.js`. The main colors used are:
+
 - Primary: Blue (`#0ea5e9`) to Cyan (`#06b6d4`) gradient
 - Background: Black (`#000000`) with subtle gradients
 - Text: White with various opacity levels
@@ -118,21 +122,22 @@ The contact form uses API routes. To enable email sending:
 3. Update `app/api/contact/route.js` with your email service logic
 
 Example with SendGrid:
+
 ```javascript
 // Install: npm install @sendgrid/mail
-import sgMail from '@sendgrid/mail'
+import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const msg = {
   to: 'hello@shanzy.dev',
   from: 'noreply@shanzy.dev',
   subject: `Portfolio Contact: ${subject}`,
   text: message,
-  html: `<p>${message}</p>`
-}
+  html: `<p>${message}</p>`,
+};
 
-await sgMail.send(msg)
+await sgMail.send(msg);
 ```
 
 ## 🎯 SEO Optimization
@@ -154,6 +159,7 @@ await sgMail.send(msg)
 ### Other Platforms
 
 The project can be deployed on:
+
 - Netlify
 - Railway
 - Render
@@ -162,6 +168,7 @@ The project can be deployed on:
 ## 📊 Performance
 
 This portfolio is optimized for:
+
 - **Lighthouse Score**: 90+ across all metrics
 - **Core Web Vitals**: Excellent scores
 - **Image Optimization**: Next.js Image component
@@ -194,5 +201,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ---
 
 Built with ❤️ by Shanzy using Next.js, Tailwind CSS, and Framer Motion.
+
 # Shanzy-Portfolio
+
 Modern portfolio of Shanzy — UI/UX Designer, Python Developer, and Web Enthusiast. Built with Next.js, Tailwind CSS, and deployed on Vercel.

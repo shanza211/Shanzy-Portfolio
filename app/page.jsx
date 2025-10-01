@@ -8,19 +8,19 @@ export default function Home() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  
+
   const titles = [
-    "UI/UX Designer",
-    "Python Developer", 
-    "Figma Expert",
-    "WordPress Developer",
-    "Photoshop Specialist"
+    'UI/UX Designer',
+    'Python Developer',
+    'Figma Expert',
+    'WordPress Developer',
+    'Photoshop Specialist',
   ];
 
   useEffect(() => {
     const currentTitle = titles[currentTitleIndex];
     const typingSpeed = isDeleting ? 100 : 150;
-    
+
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         if (currentText.length < currentTitle.length) {
@@ -65,41 +65,47 @@ export default function Home() {
   };
 
   const skills = [
-    { 
-      name: 'UI/UX Design', 
-      icon: '🎨', 
-      description: 'Creating intuitive and beautiful user interfaces with modern design principles and user-centered approach.',
-      level: '95%' 
+    {
+      name: 'UI/UX Design',
+      icon: '🎨',
+      description:
+        'Creating intuitive and beautiful user interfaces with modern design principles and user-centered approach.',
+      level: '95%',
     },
-    { 
-      name: 'Python Development', 
-      icon: '🐍', 
-      description: 'Building robust applications and automation scripts with clean, efficient Python code and best practices.',
-      level: '90%' 
+    {
+      name: 'Python Development',
+      icon: '🐍',
+      description:
+        'Building robust applications and automation scripts with clean, efficient Python code and best practices.',
+      level: '90%',
     },
-    { 
-      name: 'Figma Design', 
-      icon: '🎯', 
-      description: 'Crafting pixel-perfect designs and interactive prototypes using Figma\'s advanced features and components.',
-      level: '98%' 
+    {
+      name: 'Figma Design',
+      icon: '🎯',
+      description:
+        "Crafting pixel-perfect designs and interactive prototypes using Figma's advanced features and components.",
+      level: '98%',
     },
-    { 
-      name: 'React/Next.js', 
-      icon: '⚛️', 
-      description: 'Developing fast, scalable web applications with React ecosystem and Next.js framework.',
-      level: '85%' 
+    {
+      name: 'React/Next.js',
+      icon: '⚛️',
+      description:
+        'Developing fast, scalable web applications with React ecosystem and Next.js framework.',
+      level: '85%',
     },
-    { 
-      name: 'WordPress Development', 
-      icon: '🌐', 
-      description: 'Custom WordPress themes and plugins development with PHP, ensuring optimal performance.',
-      level: '88%' 
+    {
+      name: 'WordPress Development',
+      icon: '🌐',
+      description:
+        'Custom WordPress themes and plugins development with PHP, ensuring optimal performance.',
+      level: '88%',
     },
-    { 
-      name: 'Adobe Photoshop', 
-      icon: '🖌️', 
-      description: 'Professional photo editing, digital art creation, and graphic design using advanced Photoshop techniques.',
-      level: '92%' 
+    {
+      name: 'Adobe Photoshop',
+      icon: '🖌️',
+      description:
+        'Professional photo editing, digital art creation, and graphic design using advanced Photoshop techniques.',
+      level: '92%',
     },
   ];
 
@@ -134,10 +140,7 @@ export default function Home() {
         >
           <motion.div variants={itemVariants}>
             <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold mb-6'>
-              Hi, I'm{' '}
-              <span className='gradient-text glow-effect'>
-                Shanzy 
-              </span>
+              Hi, I'm <span className='gradient-text glow-effect'>Shanzy</span>
             </h1>
           </motion.div>
 
@@ -145,9 +148,9 @@ export default function Home() {
             variants={itemVariants}
             className='mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto min-h-[2rem]'
           >
-            <span className="inline-flex items-center">
+            <span className='inline-flex items-center'>
               {currentText}
-              <span className="animate-pulse ml-1 text-blue-400">{cursor}</span>
+              <span className='animate-pulse ml-1 text-blue-400'>{cursor}</span>
             </span>
           </motion.p>
 
@@ -166,19 +169,31 @@ export default function Home() {
             className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'
           >
             <div className='hero-stats py-6'>
-              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>50+</div>
+              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>
+                50+
+              </div>
               <div className='text-sm text-gray-400 font-medium'>Projects</div>
             </div>
             <div className='hero-stats py-6'>
-              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>3+</div>
+              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>
+                3+
+              </div>
               <div className='text-sm text-gray-400 font-medium'>Years Exp</div>
             </div>
             <div className='hero-stats py-6'>
-              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>100%</div>
-              <div className='text-sm text-gray-400 font-medium'>Client<br/>Satisfaction</div>
+              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>
+                100%
+              </div>
+              <div className='text-sm text-gray-400 font-medium'>
+                Client
+                <br />
+                Satisfaction
+              </div>
             </div>
             <div className='hero-stats py-6'>
-              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>24/7</div>
+              <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>
+                24/7
+              </div>
               <div className='text-sm text-gray-400 font-medium'>Support</div>
             </div>
           </motion.div>
@@ -247,7 +262,7 @@ export default function Home() {
             }}
             className='absolute top-20 left-10 w-20 h-20 rounded-full opacity-20'
             style={{
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             }}
           />
           <motion.div
@@ -262,7 +277,7 @@ export default function Home() {
             }}
             className='absolute top-40 right-20 w-16 h-16 rounded-full opacity-30'
             style={{
-              background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+              background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
             }}
           />
           <motion.div
@@ -277,7 +292,7 @@ export default function Home() {
             }}
             className='absolute bottom-20 left-1/4 w-12 h-12 rounded-full opacity-25'
             style={{
-              background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+              background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
             }}
           />
         </div>
@@ -312,7 +327,7 @@ export default function Home() {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className='glass-card p-8 rounded-2xl text-center group hover:border-blue-500/30 transition-all duration-300'
               >
-                <motion.div 
+                <motion.div
                   className='w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-400 via-purple-500 to-green-400 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300'
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
@@ -373,10 +388,13 @@ export default function Home() {
                 whileHover={{ y: -15, scale: 1.02 }}
                 className='project-card rounded-2xl overflow-hidden group'
               >
-                <div className='aspect-video relative overflow-hidden'
-                     style={{
-                       background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)'
-                     }}>
+                <div
+                  className='aspect-video relative overflow-hidden'
+                  style={{
+                    background:
+                      'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)',
+                  }}
+                >
                   <div className='absolute inset-0 flex items-center justify-center'>
                     <div className='text-6xl opacity-70 floating'>🚀</div>
                   </div>
