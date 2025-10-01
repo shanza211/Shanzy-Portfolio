@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../../components/ProjectCard';
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');

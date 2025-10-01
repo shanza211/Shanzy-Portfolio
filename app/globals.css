@@ -76,6 +76,31 @@ body {
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
+/* Profile Photo Styles */
+.profile-photo-container {
+  position: relative;
+}
+
+.profile-photo-border {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  border-radius: 50%;
+  padding: 3px;
+  animation: rotate-border 8s linear infinite;
+}
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-photo-glow {
+  filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.3));
+}
+
 .animated-bg {
   position: relative;
   overflow: hidden;
@@ -108,16 +133,16 @@ body {
 }
 
 .floating {
-  animation: float 6s ease-in-out infinite;
+  animation: subtle-float 4s ease-in-out infinite;
 }
 
-@keyframes float {
+@keyframes subtle-float {
   0%,
   100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-5px);
   }
 }
 
@@ -283,15 +308,15 @@ body {
 @keyframes pulse-glow {
   0%,
   100% {
-    filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.3));
+    filter: drop-shadow(0 0 3px rgba(102, 126, 234, 0.2));
   }
   50% {
-    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.6));
+    filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.4));
   }
 }
 
 .pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 /* Responsive improvements */

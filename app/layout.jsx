@@ -1,7 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,6 +14,14 @@ export const metadata = {
     'UI/UX Designer, Python Developer, Figma, Portfolio, Web Design, Glassmorphism',
   authors: [{ name: 'Shanzy' }],
   creator: 'Shanzy',
+  icons: {
+    icon: [
+      { url: '/icon', type: 'image/png', sizes: '32x32' },
+      { url: '/images/shanzy.jpg', type: 'image/jpeg', sizes: '32x32' }
+    ],
+    shortcut: '/images/shanzy.jpg',
+    apple: '/images/shanzy.jpg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

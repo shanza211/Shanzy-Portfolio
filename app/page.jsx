@@ -11,7 +11,7 @@ export default function Home() {
 
   const titles = useMemo(() => [
     'UI/UX Designer',
-    'Python Developer',
+    'Python Developer', 
     'Figma Expert',
     'WordPress Developer',
     'Photoshop Specialist',
@@ -41,30 +41,7 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, [currentText, isDeleting, currentTitleIndex, titles]);
 
-  const cursor = '|';
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const skills = [
+  const cursor = '|';  const skills = [
     {
       name: 'UI/UX Design',
       icon: '🎨',
@@ -132,42 +109,51 @@ export default function Home() {
     <div className='min-h-screen'>
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20'>
-        <motion.div
-          variants={containerVariants}
-          initial='hidden'
-          animate='visible'
-          className='max-w-4xl mx-auto text-center'
-        >
-          <motion.div variants={itemVariants}>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold mb-6'>
-              Hi, I&apos;m <span className='gradient-text glow-effect'>Shanzy</span>
-            </h1>
+        <div className='max-w-4xl mx-auto text-center'>
+          {/* Profile Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className='mb-8 profile-photo-container'
+          >
+            <div className='relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto'>
+              <div className=' profile-photo-glow'>
+                <div className='w-full h-full rounded-full bg-gray-900 p-1'>
+                  <Image
+                    src='/images/shanzy.jpg'
+                    alt='Shanzy - UI/UX Designer & Developer'
+                    width={200}
+                    height={200}
+                    className='w-full h-full rounded-full object-cover border border-white/20'
+                    priority
+                  />
+                </div>
+              </div>
+              {/* Subtle background glow */}
+              <div className='absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/15 via-purple-500/15 to-pink-500/15 blur-2xl -z-10 scale-110'></div>
+            </div>
           </motion.div>
 
-          <motion.p
-            variants={itemVariants}
-            className='mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto min-h-[2rem]'
-          >
+          <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold mb-6'>
+            Hi, I&apos;m <span className='gradient-text glow-effect'>Shanzy</span>
+          </h1>
+
+          <p className='mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto min-h-[2rem]'>
             <span className='inline-flex items-center'>
               {currentText}
               <span className='animate-pulse ml-1 text-blue-400'>{cursor}</span>
             </span>
-          </motion.p>
+          </p>
 
-          <motion.p
-            variants={itemVariants}
-            className='mt-4 text-lg text-gray-400 max-w-3xl mx-auto'
-          >
+          <p className='mt-4 text-lg text-gray-400 max-w-3xl mx-auto'>
             Crafting beautiful, functional digital experiences with modern
             design principles and cutting-edge technology. Specializing in
             glassmorphism aesthetics and user-centered solutions.
-          </motion.p>
+          </p>
 
           {/* Hero Stats */}
-          <motion.div
-            variants={itemVariants}
-            className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'
-          >
+          <div className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
             <div className='hero-stats py-6'>
               <div className='text-3xl md:text-4xl font-bold gradient-text mb-2'>
                 50+
@@ -196,16 +182,13 @@ export default function Home() {
               </div>
               <div className='text-sm text-gray-400 font-medium'>Support</div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={itemVariants}
-            className='flex flex-col sm:flex-row gap-6 justify-center'
-          >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href='/projects'
-                className='gradient-button inline-flex items-center px-10 py-4 text-lg font-medium rounded-xl text-white shadow-lg min-w-[180px] justify-center'
+                className='gradient-button inline-flex items-center px-10 py-4 text-lg font-medium rounded-xl text-white shadow-lg min-w-[180px] justify-center transition-all duration-150'
               >
                 View My Work
                 <svg
@@ -224,10 +207,10 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href='/contact'
-                className='glass-card inline-flex items-center px-10 py-4 text-lg font-medium rounded-xl text-white hover:bg-white/10 transition-all duration-200 min-w-[180px] justify-center'
+                className='glass-card inline-flex items-center px-10 py-4 text-lg font-medium rounded-xl text-white hover:bg-white/10 transition-all duration-150 min-w-[180px] justify-center'
               >
                 Let&apos;s Connect
                 <svg
@@ -245,96 +228,37 @@ export default function Home() {
                 </svg>
               </Link>
             </motion.div>
-          </motion.div>
-        </motion.div>
-
-        {/* Floating Elements */}
-        <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className='absolute top-20 left-10 w-20 h-20 rounded-full opacity-20'
-            style={{
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            }}
-          />
-          <motion.div
-            animate={{
-              y: [0, 20, 0],
-              rotate: [0, -5, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className='absolute top-40 right-20 w-16 h-16 rounded-full opacity-30'
-            style={{
-              background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-            }}
-          />
-          <motion.div
-            animate={{
-              y: [0, 15, 0],
-              rotate: [0, -3, 0],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className='absolute bottom-20 left-1/4 w-12 h-12 rounded-full opacity-25'
-            style={{
-              background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-            }}
-          />
+          </div>
         </div>
       </section>
 
       {/* Skills Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
-          >
+          <div className='text-center mb-16'>
             <h2 className='section-title text-3xl md:text-4xl font-bold mb-6'>
               Skills & Expertise
             </h2>
             <p className='text-gray-400 max-w-2xl mx-auto text-lg'>
               Specialized in modern design and development technologies
             </p>
-          </motion.div>
+          </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.15 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className='glass-card p-8 rounded-2xl text-center group hover:border-blue-500/30 transition-all duration-300'
+                whileHover={{ scale: 1.02 }}
+                className='glass-card p-8 rounded-2xl text-center group hover:border-blue-500/30 transition-all duration-150'
               >
-                <motion.div
-                  className='w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-400 via-purple-500 to-green-400 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300'
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
+                <div className='w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-400 via-purple-500 to-green-400 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-105 transition-transform duration-150'>
                   {skill.icon}
-                </motion.div>
-                <h3 className='text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
+                </div>
+                <h3 className='text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-150'>
                   {skill.name}
                 </h3>
                 <p className='text-gray-400 text-sm leading-relaxed mb-6 min-h-[4rem]'>
@@ -344,7 +268,7 @@ export default function Home() {
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: skill.level }}
-                    transition={{ duration: 1.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.8, delay: index * 0.05 }}
                     viewport={{ once: true }}
                     className='h-2 bg-gradient-to-r from-blue-400 via-purple-500 to-green-400 rounded-full'
                   />
@@ -361,13 +285,7 @@ export default function Home() {
       {/* Featured Projects Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
-          >
+          <div className='text-center mb-16'>
             <h2 className='section-title text-3xl md:text-4xl font-bold mb-6'>
               Featured Projects
             </h2>
@@ -375,17 +293,17 @@ export default function Home() {
               A showcase of my recent work combining design excellence with
               technical innovation
             </p>
-          </motion.div>
+          </div>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.15, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -15, scale: 1.02 }}
+                whileHover={{ scale: 1.02 }}
                 className='project-card rounded-2xl overflow-hidden group'
               >
                 <div
@@ -396,12 +314,12 @@ export default function Home() {
                   }}
                 >
                   <div className='absolute inset-0 flex items-center justify-center'>
-                    <div className='text-6xl opacity-70 floating'>🚀</div>
+                    <div className='text-6xl opacity-70 group-hover:scale-105 transition-transform duration-150'>🚀</div>
                   </div>
                   <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent'></div>
                 </div>
                 <div className='p-6'>
-                  <h3 className='text-xl font-semibold text-white mb-2'>
+                  <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-150'>
                     {project.title}
                   </h3>
                   <p className='text-gray-400 mb-4'>{project.description}</p>
@@ -417,7 +335,7 @@ export default function Home() {
                   </div>
                   <Link
                     href={project.link}
-                    className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200'
+                    className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-150'
                   >
                     View Project
                     <svg
@@ -439,16 +357,10 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className='text-center mt-12'
-          >
+          <div className='text-center mt-12'>
             <Link
               href='/projects'
-              className='inline-flex items-center px-6 py-3 border border-white/20 text-base font-medium rounded-xl text-white glass hover:bg-white/10 transition-all duration-200'
+              className='inline-flex items-center px-6 py-3 border border-white/20 text-base font-medium rounded-xl text-white glass hover:bg-white/10 transition-all duration-150'
             >
               View All Projects
               <svg
@@ -465,19 +377,13 @@ export default function Home() {
                 />
               </svg>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section id='contact' className='py-20 px-4 sm:px-6 lg:px-8'>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className='max-w-4xl mx-auto text-center'
-        >
+        <div className='max-w-4xl mx-auto text-center'>
           <div className='glass-card p-12 rounded-3xl'>
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to bring your ideas to life?
@@ -486,10 +392,10 @@ export default function Home() {
               Let&apos;s collaborate on creating something amazing together. I&apos;m
               always excited to work on new challenges.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
                 href='/contact'
-                className='gradient-button inline-flex items-center px-8 py-4 text-white font-medium rounded-xl transition-all duration-200 shadow-lg'
+                className='gradient-button inline-flex items-center px-8 py-4 text-white font-medium rounded-xl transition-all duration-150 shadow-lg'
               >
                 Start a Project
                 <svg
@@ -508,7 +414,7 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       </section>
     </div>
   );
