@@ -150,7 +150,7 @@ export default function About() {
                     for.
                   </p>
                   <p className='text-gray-300 text-lg leading-relaxed'>
-                    Today, I continue to push the boundaries of what's possible
+                    Today, I continue to push the boundaries of what&apos;s possible
                     in web design, particularly in the realm of glassmorphism
                     and modern UI patterns, while maintaining a strong focus on
                     performance and accessibility.
@@ -319,7 +319,7 @@ export default function About() {
                 Interested in working together?
               </h2>
               <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-                I'm always open to discussing new opportunities and interesting
+                I&apos;m always open to discussing new opportunities and interesting
                 projects.
               </p>
               <motion.a

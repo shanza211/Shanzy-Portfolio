@@ -2,20 +2,20 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 export default function Home() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const titles = [
+  const titles = useMemo(() => [
     'UI/UX Designer',
     'Python Developer',
     'Figma Expert',
     'WordPress Developer',
     'Photoshop Specialist',
-  ];
+  ], []);
 
   useEffect(() => {
     const currentTitle = titles[currentTitleIndex];
@@ -140,7 +140,7 @@ export default function Home() {
         >
           <motion.div variants={itemVariants}>
             <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold mb-6'>
-              Hi, I'm <span className='gradient-text glow-effect'>Shanzy</span>
+              Hi, I&apos;m <span className='gradient-text glow-effect'>Shanzy</span>
             </h1>
           </motion.div>
 
@@ -229,7 +229,7 @@ export default function Home() {
                 href='/contact'
                 className='glass-card inline-flex items-center px-10 py-4 text-lg font-medium rounded-xl text-white hover:bg-white/10 transition-all duration-200 min-w-[180px] justify-center'
               >
-                Let's Connect
+                Let&apos;s Connect
                 <svg
                   className='ml-2 w-5 h-5'
                   fill='none'
@@ -483,7 +483,7 @@ export default function Home() {
               Ready to bring your ideas to life?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Let's collaborate on creating something amazing together. I'm
+              Let&apos;s collaborate on creating something amazing together. I&apos;m
               always excited to work on new challenges.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

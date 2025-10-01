@@ -283,8 +283,8 @@ export default function Projects() {
                 Like what you see?
               </h2>
               <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-                I'm always excited to work on new projects and bring creative
-                ideas to life. Let's discuss how we can collaborate.
+                I&apos;m always excited to work on new projects and bring creative
+                ideas to life. Let&apos;s discuss how we can collaborate.
               </p>
               <motion.a
                 href='/contact'

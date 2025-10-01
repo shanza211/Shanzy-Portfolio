@@ -131,7 +131,7 @@ export default function Privacy() {
           <h2 className='text-2xl font-bold text-white mb-4'>Introduction</h2>
           <div className='text-gray-300 space-y-4'>
             <p>
-              Welcome to Shanzy's Portfolio. This Privacy Policy explains how we
+              Welcome to Shanzy&apos;s Portfolio. This Privacy Policy explains how we
               collect, use, disclose, and safeguard your information when you
               visit our website or use our services. Please read this privacy
               policy carefully.
@@ -185,7 +185,7 @@ export default function Privacy() {
           <div className='text-gray-300 space-y-4'>
             <p>
               If you have any questions or concerns about this Privacy Policy or
-              our data practices, please don't hesitate to contact us:
+              our data practices, please don&apos;t hesitate to contact us:
             </p>
             <div className='flex flex-col sm:flex-row gap-4'>
               <div className='flex items-center'>

@@ -155,7 +155,7 @@ export default function Terms() {
           <h2 className='text-2xl font-bold text-white mb-4'>Introduction</h2>
           <div className='text-gray-300 space-y-4'>
             <p>
-              Welcome to Shanzy's Portfolio. These Terms of Service ("Terms")
+              Welcome to Shanzy&apos;s Portfolio. These Terms of Service (&ldquo;Terms&rdquo;)
               govern your use of our website and services. By accessing or using
               our website, you agree to be bound by these Terms.
             </p>
@@ -249,7 +249,7 @@ export default function Terms() {
           <div className='text-gray-300 space-y-4'>
             <p>
               If you have any questions about these Terms of Service, please
-              contact us. We're happy to clarify any provisions or discuss how
+              contact us. We&apos;re happy to clarify any provisions or discuss how
               they apply to your specific situation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4'>

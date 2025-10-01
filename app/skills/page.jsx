@@ -307,10 +307,10 @@ export default function Skills() {
         >
           <div className='glass-card p-12 rounded-3xl animated-bg'>
             <h2 className='section-title text-3xl md:text-4xl font-bold mb-6'>
-              Let's Build Something Amazing
+              Let&apos;s Build Something Amazing
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Ready to leverage these skills for your next project? Let's
+              Ready to leverage these skills for your next project? Let&apos;s
               discuss how I can help bring your vision to life.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

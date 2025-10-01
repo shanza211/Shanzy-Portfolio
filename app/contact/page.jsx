@@ -164,10 +164,10 @@ export default function Contact() {
             className='text-center mb-16'
           >
             <h1 className='section-title text-4xl md:text-5xl font-bold mb-6'>
-              Let's Work Together
+              Let&apos;s Work Together
             </h1>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              Have a project in mind? I'd love to hear about it. Let's discuss
+              Have a project in mind? I&apos;d love to hear about it. Let&apos;s discuss
               how we can bring your ideas to life with exceptional design and
               development.
             </p>
@@ -194,7 +194,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className='mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400'
                 >
-                  Thank you! Your message has been sent successfully. I'll get
+                  Thank you! Your message has been sent successfully. I&apos;ll get
                   back to you soon.
                 </motion.div>
               )}
@@ -517,10 +517,10 @@ export default function Contact() {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 <div>
                   <h3 className='text-lg font-semibold text-white mb-2'>
-                    What's your typical project timeline?
+                    What&apos;s your typical project timeline?
                   </h3>
                   <p className='text-gray-400'>
-                    Most projects take 2-8 weeks depending on complexity. I'll
+                    Most projects take 2-8 weeks depending on complexity. I&apos;ll
                     provide a detailed timeline during our initial consultation.
                   </p>
                 </div>
@@ -529,14 +529,14 @@ export default function Contact() {
                     Do you work with international clients?
                   </h3>
                   <p className='text-gray-400'>
-                    Absolutely! I've worked with clients from around the world
-                    and I'm comfortable with different time zones and
+                    Absolutely! I&apos;ve worked with clients from around the world
+                    and I&apos;m comfortable with different time zones and
                     communication preferences.
                   </p>
                 </div>
                 <div>
                   <h3 className='text-lg font-semibold text-white mb-2'>
-                    What's included in your design service?
+                    What&apos;s included in your design service?
                   </h3>
                   <p className='text-gray-400'>
                     Complete design process from research and wireframes to

@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
+  metadataBase: new URL('https://shanzy-portfolio.vercel.app'),
   title: 'Shanzy — UI/UX Designer & Python Developer',
   description:
     'Modern portfolio of Shanzy — UI/UX Designer, Python Developer, and Figma expert. Specializing in glassmorphism design and modern web applications.',

@@ -303,7 +303,7 @@ export default function Services() {
               Ready to Start Your Project?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Let's discuss your ideas and create something amazing together.
+              Let&apos;s discuss your ideas and create something amazing together.
               Get in touch for a free consultation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
