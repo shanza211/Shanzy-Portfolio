@@ -17,18 +17,21 @@ export default function Icon() {
       // ImageResponse JSX element
       <div
         style={{
-          fontSize: 24,
+          fontSize: 20,
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
           borderRadius: '50%',
+          fontWeight: 'bold',
         }}
       >
-        S
+        <div style={{ fontSize: 16, marginBottom: -2 }}>UI/UX</div>
+        <div style={{ fontSize: 12 }}>DESIGNER</div>
       </div>
     ),
     // ImageResponse options

@@ -13,18 +13,21 @@ export default function AppleIcon() {
     (
       <div
         style={{
-          fontSize: 48,
+          fontSize: 42,
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
           borderRadius: '22%',
+          fontWeight: 'bold',
         }}
       >
-        S
+        <div style={{ fontSize: 32, marginBottom: -4 }}>UI/UX</div>
+        <div style={{ fontSize: 24 }}>DESIGNER</div>
       </div>
     ),
     {
