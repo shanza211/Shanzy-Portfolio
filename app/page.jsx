@@ -110,31 +110,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20'>
         <div className='max-w-4xl mx-auto text-center'>
-          {/* Profile Photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className='mb-8 profile-photo-container'
-          >
-            <div className='relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto'>
-              <div className=' profile-photo-glow'>
-                <div className='w-full h-full rounded-full bg-gray-900 p-1'>
-                  <Image
-                    src='/images/shanzy.jpg'
-                    alt='Shanzy - UI/UX Designer & Developer'
-                    width={200}
-                    height={200}
-                    className='w-full h-full rounded-full object-cover border border-white/20'
-                    priority
-                  />
-                </div>
-              </div>
-              {/* Subtle background glow */}
-              <div className='absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/15 via-purple-500/15 to-pink-500/15 blur-2xl -z-10 scale-110'></div>
-            </div>
-          </motion.div>
-
           <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold mb-6'>
             Hi, I&apos;m <span className='gradient-text glow-effect'>Shanzy</span>
           </h1>
