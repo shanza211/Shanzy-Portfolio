@@ -139,7 +139,7 @@ export default function Projects() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-[#0a3a39] text-white shadow-lg scale-105'
+                    ? 'bg-[#c9f31d] text-white shadow-lg scale-105'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
                 }`}
               >
@@ -188,7 +188,7 @@ export default function Projects() {
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'
+                          className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'
                         >
                           {tag}
                         </span>
@@ -206,7 +206,7 @@ export default function Projects() {
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'
+                          className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'
                         >
                           {tag}
                         </span>

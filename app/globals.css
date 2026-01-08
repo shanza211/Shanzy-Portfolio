@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --gradient-primary: linear-gradient(135deg, #0a3a39 0%, #0d4d4c 100%);
-  --gradient-secondary: linear-gradient(135deg, #0a3a39 0%, #075958 100%);
-  --gradient-accent: linear-gradient(135deg, #0a3a39 0%, #0d6665 100%);
-  --accent-color: #0a3a39;
+  --gradient-primary: linear-gradient(135deg, #c9f31d 0%, #0d4d4c 100%);
+  --gradient-secondary: linear-gradient(135deg, #c9f31d 0%, #075958 100%);
+  --gradient-accent: linear-gradient(135deg, #c9f31d 0%, #0d6665 100%);
+  --accent-color: #c9f31d;
   --bg-primary: #000000;
   --bg-secondary: #0a0a0a;
   --bg-card: rgba(255, 255, 255, 0.03);
@@ -44,14 +44,14 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #0a3a39 0%, #0d6665 100%);
+  background: linear-gradient(135deg, #c9f31d 0%, #0d6665 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-button {
-  background: linear-gradient(135deg, #0a3a39 0%, #0d6665 100%);
+  background: linear-gradient(135deg, #c9f31d 0%, #0d6665 100%);
   border: none;
   transition: all 0.3s ease;
 }
@@ -68,7 +68,7 @@ body {
 }
 
 .profile-photo-border {
-  background: linear-gradient(135deg, #0a3a39 0%, #0d6665 50%, #0a3a39 100%);
+  background: linear-gradient(135deg, #c9f31d 0%, #0d6665 50%, #c9f31d 100%);
   border-radius: 50%;
   padding: 3px;
   animation: rotate-border 8s linear infinite;
@@ -150,7 +150,7 @@ body {
 }
 
 .progress-bar {
-  background: linear-gradient(90deg, #0a3a39 0%, #0d6665 100%);
+  background: linear-gradient(90deg, #c9f31d 0%, #0d6665 100%);
   border-radius: 10px;
   height: 6px;
   position: relative;
@@ -219,7 +219,7 @@ body {
 }
 
 .section-title {
-  background: linear-gradient(135deg, #0a3a39 0%, #0d6665 100%);
+  background: linear-gradient(135deg, #c9f31d 0%, #0d6665 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -234,7 +234,7 @@ body {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(135deg, #0a3a39 0%, #0d6665 100%);
+  background: linear-gradient(135deg, #c9f31d 0%, #0d6665 100%);
   border-radius: 2px;
 }
 
@@ -269,7 +269,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #0a3a39 0%, #0d6665 100%);
+  background: linear-gradient(90deg, #c9f31d 0%, #0d6665 100%);
 }
 
 /* Scrollbar Styling */
@@ -282,7 +282,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #0a3a39 0%, #0d6665 100%);
+  background: linear-gradient(135deg, #c9f31d 0%, #0d6665 100%);
   border-radius: 4px;
 }
 

@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         'glass-white': 'rgba(255, 255, 255, 0.1)',
         'glass-border': 'rgba(255, 255, 255, 0.06)',
-        'accent': '#0a3a39',
+        'accent': '#c9f31d',
         'accent-light': '#0d6665',
         'accent-dark': '#075958',
       },

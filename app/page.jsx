@@ -151,7 +151,7 @@ export default function Home() {
               >
                 <span className='inline-flex items-center'>
                   {currentText}
-                  <span className='animate-pulse ml-1 text-[#0a3a39]'>{cursor}</span>
+                  <span className='animate-pulse ml-1 text-[#c9f31d]'>{cursor}</span>
                 </span>
               </motion.h2>
 
@@ -174,7 +174,7 @@ export default function Home() {
               >
                 <Link
                   href='/contact'
-                  className='bg-[#0a3a39] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-[#0a3a39]/50'
+                  className='bg-[#c9f31d] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-[#c9f31d]/50'
                 >
                   Hire Me
                   <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -184,7 +184,7 @@ export default function Home() {
                 
                 <Link
                   href='/projects'
-                  className='border-2 border-[#0a3a39] text-[#0a3a39] hover:bg-[#0a3a39] hover:text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2'
+                  className='border-2 border-[#c9f31d] text-[#c9f31d] hover:bg-[#c9f31d] hover:text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2'
                 >
                   Portfolio
                   <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -205,7 +205,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 className='text-left'
               >
-                <h3 className='text-5xl md:text-6xl font-bold text-[#0a3a39] mb-2'>30+</h3>
+                <h3 className='text-5xl md:text-6xl font-bold text-[#c9f31d] mb-2'>30+</h3>
                 <p className='text-gray-400 text-base'>Happy Clients</p>
               </motion.div>
 
@@ -215,7 +215,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 className='text-left'
               >
-                <h3 className='text-5xl md:text-6xl font-bold text-[#0a3a39] mb-2'>25+</h3>
+                <h3 className='text-5xl md:text-6xl font-bold text-[#c9f31d] mb-2'>25+</h3>
                 <p className='text-gray-400 text-base'>Positive Reviews</p>
               </motion.div>
 
@@ -225,7 +225,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 className='text-left'
               >
-                <h3 className='text-5xl md:text-6xl font-bold text-[#0a3a39] mb-2'>100%</h3>
+                <h3 className='text-5xl md:text-6xl font-bold text-[#c9f31d] mb-2'>100%</h3>
                 <p className='text-gray-400 text-base'>Client Satisfactions</p>
               </motion.div>
             </motion.div>
@@ -252,7 +252,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='inline-flex items-center gap-2 mb-6'
               >
-                <span className='text-[#0a3a39] text-xl'></span>
+                <span className='text-[#c9f31d] text-xl'></span>
                 <span className='text-gray-400 text-sm font-medium'>About Shanzy Saleem</span>
               </motion.div>
 
@@ -264,7 +264,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight'
               >
-                Creative <span className='text-[#0a3a39]'>UI/UX Designer</span> Based in Pakistan
+                Creative <span className='text-[#c9f31d]'>UI/UX Designer</span> Based in Pakistan
               </motion.h2>
 
               {/* Description */}
@@ -297,25 +297,25 @@ export default function Home() {
                 className='grid grid-cols-2 gap-4 mb-8'
               >
                 <div className='flex items-center gap-2'>
-                  <svg className='w-5 h-5 text-[#0a3a39]' fill='currentColor' viewBox='0 0 20 20'>
+                  <svg className='w-5 h-5 text-[#c9f31d]' fill='currentColor' viewBox='0 0 20 20'>
                     <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                   </svg>
                   <span className='text-white text-sm font-medium'>UI/UX Design</span>
                 </div>
                 <div className='flex items-center gap-2'>
-                  <svg className='w-5 h-5 text-[#0a3a39]' fill='currentColor' viewBox='0 0 20 20'>
+                  <svg className='w-5 h-5 text-[#c9f31d]' fill='currentColor' viewBox='0 0 20 20'>
                     <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                   </svg>
                   <span className='text-white text-sm font-medium'>Figma Prototyping</span>
                 </div>
                 <div className='flex items-center gap-2'>
-                  <svg className='w-5 h-5 text-[#0a3a39]' fill='currentColor' viewBox='0 0 20 20'>
+                  <svg className='w-5 h-5 text-[#c9f31d]' fill='currentColor' viewBox='0 0 20 20'>
                     <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                   </svg>
                   <span className='text-white text-sm font-medium'>SEO Optimization</span>
                 </div>
                 <div className='flex items-center gap-2'>
-                  <svg className='w-5 h-5 text-[#0a3a39]' fill='currentColor' viewBox='0 0 20 20'>
+                  <svg className='w-5 h-5 text-[#c9f31d]' fill='currentColor' viewBox='0 0 20 20'>
                     <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                   </svg>
                   <span className='text-white text-sm font-medium'>Web Developer</span>
@@ -332,7 +332,7 @@ export default function Home() {
               >
                 <a
                   href='mailto:shanzysaleem8@gmail.com'
-                  className='flex items-center gap-2 hover:text-[#0a3a39] transition-colors'
+                  className='flex items-center gap-2 hover:text-[#c9f31d] transition-colors'
                 >
                   <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 20 20'>
                     <path d='M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z' />
@@ -343,7 +343,7 @@ export default function Home() {
                 
                 <a
                   href='tel:+923467394923'
-                  className='flex items-center gap-2 hover:text-[#0a3a39] transition-colors'
+                  className='flex items-center gap-2 hover:text-[#c9f31d] transition-colors'
                 >
                   <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 20 20'>
                     <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
@@ -374,7 +374,7 @@ export default function Home() {
                 {/* Badge on Image */}
                 <div className='absolute top-6 left-6 bg-white rounded-full px-4 py-2 shadow-lg'>
                   <div className='flex items-center gap-2'>
-                    <div className='w-2 h-2 bg-[#0a3a39] rounded-full animate-pulse' />
+                    <div className='w-2 h-2 bg-[#c9f31d] rounded-full animate-pulse' />
                     <span className='text-sm font-semibold text-gray-800'>UI/UX Designer</span>
                   </div>
                 </div>
@@ -400,7 +400,7 @@ export default function Home() {
                 <div className='absolute inset-0 rounded-full bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700' />
                 {/* Asterisk Icon */}
                 <div className='absolute inset-0 flex items-center justify-center'>
-                  <span className='text-[#0a3a39]' style={{ fontSize: '200px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', lineHeight: '1' }}>*</span>
+                  <span className='text-[#c9f31d]' style={{ fontSize: '200px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', lineHeight: '1' }}>*</span>
                 </div>
               </div>
             </motion.div>
@@ -416,7 +416,7 @@ export default function Home() {
               >
                 <p className='text-gray-400 text-sm font-medium mb-4'>My Resume</p>
                 <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold leading-tight'>
-                  Real <span className='text-[#0a3a39]'>Problem Solutions</span><br />Experience
+                  Real <span className='text-[#c9f31d]'>Problem Solutions</span><br />Experience
                 </h2>
               </motion.div>
 
@@ -428,7 +428,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
-                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
                     <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
@@ -436,7 +436,7 @@ export default function Home() {
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 10V3L4 14h7v7l9-11h-7z' />
                       </svg>
                     </div>
-                    <div className='w-8 h-8 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
+                    <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                       </svg>
@@ -453,7 +453,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
                     <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
@@ -461,7 +461,7 @@ export default function Home() {
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' />
                       </svg>
                     </div>
-                    <div className='w-8 h-8 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
+                    <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                       </svg>
@@ -478,7 +478,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
                     <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
@@ -486,7 +486,7 @@ export default function Home() {
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />
                       </svg>
                     </div>
-                    <div className='w-8 h-8 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
+                    <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                       </svg>
@@ -503,7 +503,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
-                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+                  className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
                     <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
@@ -511,7 +511,7 @@ export default function Home() {
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
                       </svg>
                     </div>
-                    <div className='w-8 h-8 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
+                    <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                       </svg>
@@ -540,7 +540,7 @@ export default function Home() {
           >
             <p className='text-gray-400 text-sm font-medium mb-4'>Latest Work</p>
             <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
-              Explore My <span className='text-[#0a3a39]'>Popular</span> Projects
+              Explore My <span className='text-[#c9f31d]'>Popular</span> Projects
             </h2>
           </motion.div>
 
@@ -570,8 +570,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <span className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'>Fashion</span>
-                  <span className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'>E-Commerce</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Fashion</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>E-Commerce</span>
                 </div>
               </Link>
             </motion.div>
@@ -599,8 +599,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <span className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'>Organic</span>
-                  <span className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'>E-Commerce</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Organic</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>E-Commerce</span>
                 </div>
               </Link>
             </motion.div>
@@ -628,8 +628,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <span className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'>Tech</span>
-                  <span className='px-3 py-1 bg-[#0a3a39] text-white text-sm rounded-full'>Business</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Tech</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Business</span>
                 </div>
               </Link>
             </motion.div>
@@ -645,7 +645,7 @@ export default function Home() {
           >
             <Link
               href='/projects'
-              className='inline-flex items-center gap-2 bg-[#0a3a39] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-[#0a3a39]/50'
+              className='inline-flex items-center gap-2 bg-[#c9f31d] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-[#c9f31d]/50'
             >
               View All Portfolio
               <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -668,7 +668,7 @@ export default function Home() {
           >
             <p className='text-gray-400 text-sm font-medium mb-4'>Popular Services</p>
             <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
-              My <span className='text-[#0a3a39]'>Special Service</span> For your<br />Business Development
+              My <span className='text-[#c9f31d]'>Special Service</span> For your<br />Business Development
             </h2>
           </motion.div>
 
@@ -679,11 +679,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
             >
               <div className='flex items-start justify-between mb-4'>
                 <span className='text-4xl font-bold text-gray-700'>01</span>
-                <div className='w-10 h-10 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
+                <div className='w-10 h-10 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
                   <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
@@ -701,11 +701,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
             >
               <div className='flex items-start justify-between mb-4'>
                 <span className='text-4xl font-bold text-gray-700'>02</span>
-                <div className='w-10 h-10 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
+                <div className='w-10 h-10 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
                   <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
@@ -723,11 +723,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
             >
               <div className='flex items-start justify-between mb-4'>
                 <span className='text-4xl font-bold text-gray-700'>03</span>
-                <div className='w-10 h-10 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
+                <div className='w-10 h-10 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
                   <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
@@ -745,11 +745,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300 cursor-pointer relative'
+              className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
             >
               <div className='flex items-start justify-between mb-4'>
                 <span className='text-4xl font-bold text-gray-700'>04</span>
-                <div className='w-10 h-10 rounded-full bg-[#0a3a39] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
+                <div className='w-10 h-10 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity'>
                   <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
@@ -777,14 +777,14 @@ export default function Home() {
             >
               <p className='text-gray-400 text-sm font-medium mb-4'>My Skills</p>
               <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-8'>
-                Let&apos;s Explore Popular<br /><span className='text-[#0a3a39]'>Skills & Experience</span>
+                Let&apos;s Explore Popular<br /><span className='text-[#c9f31d]'>Skills & Experience</span>
               </h2>
               <p className='text-gray-400 leading-relaxed mb-8 max-w-lg'>
                 Shanzy Saleem is UI/UX Design, Figma & Web Developer expert based in Pakistan. In today&apos;s fast-paced digital world, establishing a strong online presence is no longer optional—it&apos;s essential. I specialize in helping businesses like yours thrive in the digital space.
               </p>
               <Link
                 href='/about'
-                className='inline-flex items-center gap-2 bg-[#0a3a39] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-[#0a3a39]/50'
+                className='inline-flex items-center gap-2 bg-[#c9f31d] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-[#c9f31d]/50'
               >
                 Learn More
                 <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -807,10 +807,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#0a3a39] transition-all duration-300'
+                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
-                  <svg className='w-8 h-8 text-[#0a3a39]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
                   </svg>
                 </div>
@@ -824,10 +824,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#0a3a39] transition-all duration-300'
+                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
-                  <svg className='w-8 h-8 text-[#0a3a39]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01' />
                   </svg>
                 </div>
@@ -841,10 +841,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#0a3a39] transition-all duration-300'
+                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
-                  <svg className='w-8 h-8 text-[#0a3a39]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                   </svg>
                 </div>
@@ -858,10 +858,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#0a3a39] transition-all duration-300'
+                className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
-                  <svg className='w-8 h-8 text-[#0a3a39]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />
                   </svg>
                 </div>
@@ -875,10 +875,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
-                className='col-span-2 bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#0a3a39] transition-all duration-300'
+                className='col-span-2 bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
-                  <svg className='w-8 h-8 text-[#0a3a39]' fill='currentColor' viewBox='0 0 24 24'>
+                  <svg className='w-8 h-8 text-[#c9f31d]' fill='currentColor' viewBox='0 0 24 24'>
                     <path d='M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z'/>
                   </svg>
                 </div>
@@ -903,15 +903,15 @@ export default function Home() {
             >
               <p className='text-gray-400 text-sm font-medium mb-4'>Clients Testimonials</p>
               <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-8'>
-                I&apos;ve 120+ Clients<br />Positive<br /><span className='text-[#0a3a39]'>Feedback</span>
+                I&apos;ve 120+ Clients<br />Positive<br /><span className='text-[#c9f31d]'>Feedback</span>
               </h2>
               <div className='flex gap-4'>
-                <button className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-[#0a3a39] hover:border-[#0a3a39] transition-all duration-300'>
+                <button className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-[#c9f31d] hover:border-[#c9f31d] transition-all duration-300'>
                   <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
                   </svg>
                 </button>
-                <button className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-[#0a3a39] hover:border-[#0a3a39] transition-all duration-300'>
+                <button className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-[#c9f31d] hover:border-[#c9f31d] transition-all duration-300'>
                   <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
@@ -934,7 +934,7 @@ export default function Home() {
                 <div className='flex items-center justify-between'>
                   <div>
                     <h4 className='text-white font-bold mb-1'>Emma L.</h4>
-                    <p className='text-[#0a3a39] text-sm'>CEO, Muskoka Limos</p>
+                    <p className='text-[#c9f31d] text-sm'>CEO, Muskoka Limos</p>
                   </div>
                 </div>
               </div>
@@ -946,7 +946,7 @@ export default function Home() {
                 <div className='flex items-center justify-between'>
                   <div>
                     <h4 className='text-white font-bold mb-1'>Omar Sheikh</h4>
-                    <p className='text-[#0a3a39] text-sm'>Business Owner</p>
+                    <p className='text-[#c9f31d] text-sm'>Business Owner</p>
                   </div>
                 </div>
               </div>

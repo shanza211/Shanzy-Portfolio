@@ -72,7 +72,7 @@ export default function About() {
               >
                 <Link
                   href='/contact'
-                  className='bg-[#0a3a39] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-[#0a3a39]/50'
+                  className='bg-[#c9f31d] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-[#c9f31d]/50'
                 >
                   Hire Me
                   <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -82,7 +82,7 @@ export default function About() {
                 
                 <Link
                   href='/projects'
-                  className='border-2 border-[#0a3a39] text-[#0a3a39] hover:bg-[#0a3a39] hover:text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2'
+                  className='border-2 border-[#c9f31d] text-[#c9f31d] hover:bg-[#c9f31d] hover:text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2'
                 >
                   Portfolio
                   <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -103,7 +103,7 @@ export default function About() {
                 whileHover={{ scale: 1.05 }}
                 className='text-left'
               >
-                <h3 className='text-5xl md:text-6xl font-bold text-[#0a3a39] mb-2'>30+</h3>
+                <h3 className='text-5xl md:text-6xl font-bold text-[#c9f31d] mb-2'>30+</h3>
                 <p className='text-gray-400 text-base'>Happy Clients</p>
               </motion.div>
 
@@ -113,7 +113,7 @@ export default function About() {
                 whileHover={{ scale: 1.05 }}
                 className='text-left'
               >
-                <h3 className='text-5xl md:text-6xl font-bold text-[#0a3a39] mb-2'>25+</h3>
+                <h3 className='text-5xl md:text-6xl font-bold text-[#c9f31d] mb-2'>25+</h3>
                 <p className='text-gray-400 text-base'>Positive Reviews</p>
               </motion.div>
 
@@ -123,7 +123,7 @@ export default function About() {
                 whileHover={{ scale: 1.05 }}
                 className='text-left'
               >
-                <h3 className='text-5xl md:text-6xl font-bold text-[#0a3a39] mb-2'>100%</h3>
+                <h3 className='text-5xl md:text-6xl font-bold text-[#c9f31d] mb-2'>100%</h3>
                 <p className='text-gray-400 text-base'>Client Satisfactions</p>
               </motion.div>
             </motion.div>
@@ -143,7 +143,7 @@ export default function About() {
           >
             <p className='text-gray-400 text-sm font-medium mb-4'>What I Offer</p>
             <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
-              My <span className='text-[#0a3a39]'>Special Service</span> For your<br />Business Development
+              My <span className='text-[#c9f31d]'>Special Service</span> For your<br />Business Development
             </h2>
           </motion.div>
 
@@ -154,7 +154,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300'
+              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300'
             >
               <div className='flex items-start gap-4 mb-4'>
                 <span className='text-3xl'>01</span>
@@ -171,7 +171,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300'
+              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300'
             >
               <div className='flex items-start gap-4 mb-4'>
                 <span className='text-3xl'>02</span>
@@ -188,7 +188,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300'
+              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300'
             >
               <div className='flex items-start gap-4 mb-4'>
                 <span className='text-3xl'>03</span>
@@ -205,7 +205,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#0a3a39] transition-all duration-300'
+              className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300'
             >
               <div className='flex items-start gap-4 mb-4'>
                 <span className='text-3xl'>04</span>
@@ -232,12 +232,12 @@ export default function About() {
             >
               <p className='text-gray-400 text-sm font-medium mb-4'>Frequently Asked Question</p>
               <h2 className='text-3xl md:text-4xl font-bold mb-8'>
-                Professional Services For <span className='text-[#0a3a39]'>Your</span><br />Business Growth
+                Professional Services For <span className='text-[#c9f31d]'>Your</span><br />Business Growth
               </h2>
 
               <div className='space-y-4'>
                 <div className='flex items-start gap-3'>
-                  <div className='w-6 h-6 rounded-full bg-[#0a3a39] flex items-center justify-center flex-shrink-0 mt-1'>
+                  <div className='w-6 h-6 rounded-full bg-[#c9f31d] flex items-center justify-center flex-shrink-0 mt-1'>
                     <svg className='w-3 h-3 text-white' fill='currentColor' viewBox='0 0 20 20'>
                       <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                     </svg>
@@ -246,7 +246,7 @@ export default function About() {
                 </div>
 
                 <div className='flex items-start gap-3'>
-                  <div className='w-6 h-6 rounded-full bg-[#0a3a39] flex items-center justify-center flex-shrink-0 mt-1'>
+                  <div className='w-6 h-6 rounded-full bg-[#c9f31d] flex items-center justify-center flex-shrink-0 mt-1'>
                     <svg className='w-3 h-3 text-white' fill='currentColor' viewBox='0 0 20 20'>
                       <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                     </svg>
@@ -255,7 +255,7 @@ export default function About() {
                 </div>
 
                 <div className='flex items-start gap-3'>
-                  <div className='w-6 h-6 rounded-full bg-[#0a3a39] flex items-center justify-center flex-shrink-0 mt-1'>
+                  <div className='w-6 h-6 rounded-full bg-[#c9f31d] flex items-center justify-center flex-shrink-0 mt-1'>
                     <svg className='w-3 h-3 text-white' fill='currentColor' viewBox='0 0 20 20'>
                       <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                     </svg>
@@ -264,7 +264,7 @@ export default function About() {
                 </div>
 
                 <div className='flex items-start gap-3'>
-                  <div className='w-6 h-6 rounded-full bg-[#0a3a39] flex items-center justify-center flex-shrink-0 mt-1'>
+                  <div className='w-6 h-6 rounded-full bg-[#c9f31d] flex items-center justify-center flex-shrink-0 mt-1'>
                     <svg className='w-3 h-3 text-white' fill='currentColor' viewBox='0 0 20 20'>
                       <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                     </svg>
@@ -273,7 +273,7 @@ export default function About() {
                 </div>
 
                 <div className='flex items-start gap-3'>
-                  <div className='w-6 h-6 rounded-full bg-[#0a3a39] flex items-center justify-center flex-shrink-0 mt-1'>
+                  <div className='w-6 h-6 rounded-full bg-[#c9f31d] flex items-center justify-center flex-shrink-0 mt-1'>
                     <svg className='w-3 h-3 text-white' fill='currentColor' viewBox='0 0 20 20'>
                       <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                     </svg>
@@ -298,7 +298,7 @@ export default function About() {
           >
             <p className='text-gray-400 text-sm font-medium mb-4'>Testimonials</p>
             <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
-              Over 120+ Clients<br /><span className='text-[#0a3a39]'>Positive</span> Feedback
+              Over 120+ Clients<br /><span className='text-[#c9f31d]'>Positive</span> Feedback
             </h2>
           </motion.div>
 
@@ -312,7 +312,7 @@ export default function About() {
               className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'
             >
               <div className='flex items-center gap-3 mb-4'>
-                <div className='w-12 h-12 rounded-full bg-[#0a3a39] flex items-center justify-center text-2xl'>
+                <div className='w-12 h-12 rounded-full bg-[#c9f31d] flex items-center justify-center text-2xl'>
                   👤
                 </div>
                 <div>
@@ -334,7 +334,7 @@ export default function About() {
               className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'
             >
               <div className='flex items-center gap-3 mb-4'>
-                <div className='w-12 h-12 rounded-full bg-[#0a3a39] flex items-center justify-center text-2xl'>
+                <div className='w-12 h-12 rounded-full bg-[#c9f31d] flex items-center justify-center text-2xl'>
                   👤
                 </div>
                 <div>
@@ -356,7 +356,7 @@ export default function About() {
               className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'
             >
               <div className='flex items-center gap-3 mb-4'>
-                <div className='w-12 h-12 rounded-full bg-[#0a3a39] flex items-center justify-center text-2xl'>
+                <div className='w-12 h-12 rounded-full bg-[#c9f31d] flex items-center justify-center text-2xl'>
                   👤
                 </div>
                 <div>
