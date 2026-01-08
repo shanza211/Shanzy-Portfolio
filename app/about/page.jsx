@@ -32,7 +32,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 className='text-gray-400 text-lg mb-3'
               >
-                Hello, I'm
+                Hello, I&apos;m
               </motion.p>
               
               <motion.h1
@@ -321,7 +321,7 @@ export default function About() {
                 </div>
               </div>
               <p className='text-gray-400 leading-relaxed'>
-                "I appreciate their track for website development, and I'm doing interested with the best. I am very Impressive by their outstanding work. The UI/UX are Responsive & Mobile First Development."
+                &quot;I appreciate their track for website development, and I&apos;m doing interested with the best. I am very Impressive by their outstanding work. The UI/UX are Responsive & Mobile First Development.&quot;
               </p>
             </motion.div>
 
@@ -343,7 +343,7 @@ export default function About() {
                 </div>
               </div>
               <p className='text-gray-400 leading-relaxed'>
-                "Well, earlier i've thanked for website and digital campaigns, and I just don't know. Strongly Creating it & exactly what I needed to take my business to the next level, top-notch."
+                &quot;Well, earlier i&apos;ve thanked for website and digital campaigns, and I just don&apos;t know. Strongly Creating it & exactly what I needed to take my business to the next level, top-notch.&quot;
               </p>
             </motion.div>
 
@@ -365,7 +365,7 @@ export default function About() {
                 </div>
               </div>
               <p className='text-gray-400 leading-relaxed'>
-                "I have gotten business professionally work delivered on time more than once & every time. Their professionalism and creativity make this work impressive."
+                &quot;I have gotten business professionally work delivered on time more than once & every time. Their professionalism and creativity make this work impressive.&quot;
               </p>
             </motion.div>
           </div>

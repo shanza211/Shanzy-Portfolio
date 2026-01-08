@@ -89,7 +89,7 @@ export default function Contact() {
             >
               <p className='text-gray-400 mb-4'>Get In Touch</p>
               <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-8'>
-                Let's Talk For your<br /><span className='text-[#0a3a39]'>Next Projects</span>
+                Let&apos;s Talk For your<br /><span className='text-[#0a3a39]'>Next Projects</span>
               </h2>
 
               <div className='space-y-6 mb-8'>

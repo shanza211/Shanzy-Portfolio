@@ -129,7 +129,7 @@ export default function Navbar() {
               className='flex items-center gap-4'
             >
               <span className='hidden lg:block text-sm font-semibold text-gray-300 uppercase tracking-wider'>
-                LET'S TALK
+                LET&apos;S TALK
               </span>
               
               {/* Hamburger Menu Button */}

@@ -131,7 +131,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className='text-gray-400 text-lg mb-3'
               >
-                Hello, I'm
+                Hello, I&apos;m
               </motion.p>
               
               <motion.h1
@@ -285,7 +285,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='text-gray-400 text-base leading-relaxed mb-8'
               >
-                From designing intuitive interfaces to building modern web applications, I've helped businesses unlock their potential through impactful digital strategies. Let's create a roadmap to take your business to the next level!
+                From designing intuitive interfaces to building modern web applications, I&apos;ve helped businesses unlock their potential through impactful digital strategies. Let&apos;s create a roadmap to take your business to the next level!
               </motion.p>
 
               {/* Services Grid */}
@@ -713,7 +713,7 @@ export default function Home() {
               </div>
               <h3 className='text-2xl font-bold text-white mb-4'>Website Design</h3>
               <p className='text-gray-400 leading-relaxed'>
-                I design websites that not only look stunning but also perform flawlessly. A great website is more than just visuals—it's a customer conversion tool. I design user-friendly, mobile-optimized websites that reflect your brand, engage visitors, and encourage action.
+                I design websites that not only look stunning but also perform flawlessly. A great website is more than just visuals—it&apos;s a customer conversion tool. I design user-friendly, mobile-optimized websites that reflect your brand, engage visitors, and encourage action.
               </p>
             </motion.div>
 
@@ -735,7 +735,7 @@ export default function Home() {
               </div>
               <h3 className='text-2xl font-bold text-white mb-4'>Google Ads</h3>
               <p className='text-gray-400 leading-relaxed'>
-                By crafting highly targeted ad campaigns, I ensure your business reaches the right audience at the right time. Whether it's search ads, display ads, or retargeting strategies, my goal is to maximize your ROI and drive meaningful traffic.
+                By crafting highly targeted ad campaigns, I ensure your business reaches the right audience at the right time. Whether it&apos;s search ads, display ads, or retargeting strategies, my goal is to maximize your ROI and drive meaningful traffic.
               </p>
             </motion.div>
 
@@ -777,10 +777,10 @@ export default function Home() {
             >
               <p className='text-gray-400 text-sm font-medium mb-4'>My Skills</p>
               <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-8'>
-                Let's Explore Popular<br /><span className='text-[#0a3a39]'>Skills & Experience</span>
+                Let&apos;s Explore Popular<br /><span className='text-[#0a3a39]'>Skills & Experience</span>
               </h2>
               <p className='text-gray-400 leading-relaxed mb-8 max-w-lg'>
-                Shanzy Saleem is UI/UX Design, Figma & Web Developer expert based in Pakistan. In today's fast-paced digital world, establishing a strong online presence is no longer optional—it's essential. I specialize in helping businesses like yours thrive in the digital space.
+                Shanzy Saleem is UI/UX Design, Figma & Web Developer expert based in Pakistan. In today&apos;s fast-paced digital world, establishing a strong online presence is no longer optional—it&apos;s essential. I specialize in helping businesses like yours thrive in the digital space.
               </p>
               <Link
                 href='/about'
@@ -903,7 +903,7 @@ export default function Home() {
             >
               <p className='text-gray-400 text-sm font-medium mb-4'>Clients Testimonials</p>
               <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-8'>
-                I've 120+ Clients<br />Positive<br /><span className='text-[#0a3a39]'>Feedback</span>
+                I&apos;ve 120+ Clients<br />Positive<br /><span className='text-[#0a3a39]'>Feedback</span>
               </h2>
               <div className='flex gap-4'>
                 <button className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-[#0a3a39] hover:border-[#0a3a39] transition-all duration-300'>
@@ -929,7 +929,7 @@ export default function Home() {
             >
               <div className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'>
                 <p className='text-gray-300 leading-relaxed mb-6'>
-                  "Working with Shanzy was an absolute pleasure. The website designed for us is sleek, easy to navigate, and fully optimized for mobile devices. The content writing service helped us rank higher on search engines, attracting more potential clients. Shanzy's dedication and expertise truly set them apart."
+                  &quot;Working with Shanzy was an absolute pleasure. The website designed for us is sleek, easy to navigate, and fully optimized for mobile devices. The content writing service helped us rank higher on search engines, attracting more potential clients. Shanzy&apos;s dedication and expertise truly set them apart.&quot;
                 </p>
                 <div className='flex items-center justify-between'>
                   <div>
@@ -941,7 +941,7 @@ export default function Home() {
 
               <div className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'>
                 <p className='text-gray-300 leading-relaxed mb-6'>
-                  "I approached Shanzy for website development, and they didn't disappoint. The site is fast, secure, and visually appealing. It's exactly what I needed to stand out in my industry."
+                  &quot;I approached Shanzy for website development, and they didn&apos;t disappoint. The site is fast, secure, and visually appealing. It&apos;s exactly what I needed to stand out in my industry.&quot;
                 </p>
                 <div className='flex items-center justify-between'>
                   <div>
