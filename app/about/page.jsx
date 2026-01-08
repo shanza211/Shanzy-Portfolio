@@ -212,7 +212,7 @@ export default function About() {
                 <h3 className='text-2xl font-bold text-white'>SEO Optimization</h3>
               </div>
               <p className='text-gray-400 leading-relaxed'>
-                I write high-quality, Search-Optimized SEO content that engages audiences and increases your revenue. Whether it's blog posts, website copy, or social media content, I create compelling narratives that resonate with your target audience and boost your online presence.
+                I write high-quality, Search-Optimized SEO content that engages audiences and increases your revenue. Whether it&apos;s blog posts, website copy, or social media content, I create compelling narratives that resonate with your target audience and boost your online presence.
               </p>
             </motion.div>
           </div>
