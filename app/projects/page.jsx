@@ -1,11 +1,12 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [activeStep, setActiveStep] = useState(0);
 
   const projects = [
     {
@@ -100,8 +101,8 @@ export default function Projects() {
 
   const categories = ['All', 'WordPress Website', 'Figma Design', 'Web Developer', 'Design Hub Tool'];
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
+  const filteredProjects = selectedCategory === 'All'
+    ? projects
     : projects.filter(project => project.category === selectedCategory);
 
   return (
@@ -137,11 +138,10 @@ export default function Projects() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-[#c9f31d] text-white shadow-lg scale-105'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                }`}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
+                  ? 'bg-[#c9f31d] text-black shadow-lg scale-105'
+                  : 'bg-gray-800 text-gray-300 hover:bg-white hover:text-black'
+                  }`}
               >
                 {category}
               </button>
@@ -179,7 +179,7 @@ export default function Projects() {
                         </div>
                       )}
                       <div className='absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
-                        <span className='px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white font-medium'>
+                        <span className='px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white font-medium hover:bg-white hover:text-black transition-colors'>
                           View Website
                         </span>
                       </div>
@@ -188,7 +188,7 @@ export default function Projects() {
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'
+                          className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'
                         >
                           {tag}
                         </span>
@@ -214,6 +214,98 @@ export default function Projects() {
                     </div>
                   </>
                 )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Work Process Section - New Accordion Style */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8 bg-black overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+          >
+            <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
+              <span className='w-2 h-2 rounded-full bg-[#c9f31d] animate-pulse' />
+              <span className='text-sm font-medium text-white'>My Work Process</span>
+            </div>
+            <h2 className='text-3xl md:text-5xl font-bold leading-tight max-w-4xl mx-auto'>
+              I follow a strategic, structured process to ensure your website achieves <span className='text-[#c9f31d]'>measurable business outcomes.</span> Here&apos;s exactly how I collaborate with you
+            </h2>
+          </motion.div>
+
+          <div className='flex flex-col lg:flex-row gap-4 h-[600px] lg:h-[500px]'>
+            {[
+              {
+                num: '1',
+                title: 'Discovery & Audit',
+                desc: 'I start by understanding your business goals, target audience, and existing website challenges. A comprehensive UX audit identifies usability issues, design flaws, and areas for improvement.'
+              },
+              {
+                num: '2',
+                title: 'Strategy & Design',
+                desc: 'Based on the audit, I create a data-driven strategy and high-fidelity wireframes. This phase focuses on creating intuitive user flows and a visual identity that resonates with your brand.'
+              },
+              {
+                num: '3',
+                title: 'Development',
+                desc: 'I bring the designs to life using modern technologies like Next.js and Tailwind CSS. The code is clean, semantic, and optimized for speed and SEO, ensuring a robust foundation.'
+              },
+              {
+                num: '4',
+                title: 'Launch & Grow',
+                desc: 'After rigorous testing across devices and browsers, we launch your site. But it doesn\'t stop there; I provide ongoing support and optimization to ensure sustained growth.'
+              }
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                onClick={() => setActiveStep(index)}
+                className={`relative rounded-3xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out ${activeStep === index
+                  ? 'flex-[3] bg-gradient-to-br from-gray-900 to-black border border-[#c9f31d]'
+                  : 'flex-[0.5] bg-gray-900 hover:bg-gray-800 border border-gray-800'
+                  }`}
+                layout
+              >
+                <div className='absolute inset-0 p-8 flex flex-col justify-between h-full'>
+                  <div className='flex items-start justify-between'>
+                    <motion.span
+                      layout='position'
+                      className={`font-bold transition-colors duration-300 ${activeStep === index ? 'text-8xl text-white' : 'text-4xl text-[#c9f31d]'
+                        }`}
+                    >
+                      {step.num}
+                    </motion.span>
+                    {activeStep !== index && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className='hidden lg:block -rotate-90 origin-top-right translate-y-20 absolute right-8 top-12 whitespace-nowrap'
+                      >
+                        <span className='text-xl font-bold text-gray-500 tracking-wider'>{step.title}</span>
+                      </motion.div>
+                    )}
+                  </div>
+
+                  <AnimatePresence>
+                    {activeStep === index && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ delay: 0.2 }}
+                      >
+                        <h3 className='text-3xl font-bold text-white mb-4'>{step.title}</h3>
+                        <p className='text-gray-400 text-lg leading-relaxed max-w-lg'>
+                          {step.desc}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </motion.div>
             ))}
           </div>

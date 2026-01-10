@@ -14,14 +14,7 @@ export const metadata = {
     'UI/UX Designer, Web Developer, Figma Expert, Prototyping, SEO, Next.js, Portfolio, Shanzy Saleem',
   authors: [{ name: 'Shanzy Saleem' }],
   creator: 'Shanzy Saleem',
-  icons: {
-    icon: [
-      { url: '/icon', type: 'image/png', sizes: '32x32' },
-      { url: '/images/shanzy.jpg', type: 'image/jpeg', sizes: '32x32' }
-    ],
-    shortcut: '/images/shanzy.jpg',
-    apple: '/images/shanzy.jpg',
-  },
+
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -46,11 +39,7 @@ export const metadata = {
       'Portfolio of Shanzy Saleem — Creative UI/UX Designer and Web Developer specializing in Figma, Prototyping, and Next.js.',
     images: ['/og-image.jpg'],
   },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
-  },
+
   manifest: '/site.webmanifest',
 };
 

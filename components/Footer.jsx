@@ -153,7 +153,7 @@ export default function Footer() {
                 type='email'
                 placeholder='Your email address'
                 required
-                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
+                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c9f31d] focus:border-transparent transition-all duration-200'
               />
               <motion.button
                 whileHover={{ scale: 1.02 }}

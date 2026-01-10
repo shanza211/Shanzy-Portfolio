@@ -1,17 +1,44 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useMemo } from 'react';
 
 export default function Home() {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      name: 'Emma L.',
+      role: 'CEO, Muskoka Limos',
+      content: "Working with Shanzy was an absolute pleasure. The website designed for us is sleek, easy to navigate, and fully optimized for mobile devices. The content writing service helped us rank higher on search engines, attracting more potential clients. Shanzy's dedication and expertise truly set them apart."
+    },
+    {
+      name: 'Omar Sheikh',
+      role: 'Business Owner',
+      content: "I approached Shanzy for website development, and they didn't disappoint. The site is fast, secure, and visually appealing. It's exactly what I needed to stand out in my industry."
+    },
+    {
+      name: 'Sarah J.',
+      role: 'Marketing Director',
+      content: "Shanzy's UI/UX skills are top-notch. The prototyping phase was crucial for visualising our product. The Figma designs were pixel-perfect and easy to implement."
+    }
+  ];
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   const titles = useMemo(() => [
     'UI/UX Designer',
-    'Figma Expert', 
+    'Figma Expert',
     'Web Developer',
     'Prototyping Specialist',
     'SEO Specialist',
@@ -41,7 +68,7 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, [currentText, isDeleting, currentTitleIndex, titles]);
 
-  const cursor = '|';  const skills = [
+  const cursor = '|'; const skills = [
     {
       name: 'UI/UX Design',
       icon: '🎨',
@@ -133,7 +160,7 @@ export default function Home() {
               >
                 Hello, I&apos;m
               </motion.p>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -161,7 +188,7 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 className='text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-xl'
               >
-                Transforming Ideas into Beautiful Digital Experiences with Modern UI/UX Design, 
+                Transforming Ideas into Beautiful Digital Experiences with Modern UI/UX Design,
                 Figma Prototyping, SEO Optimization, and Web Developer.
               </motion.p>
 
@@ -174,17 +201,17 @@ export default function Home() {
               >
                 <Link
                   href='/contact'
-                  className='bg-[#c9f31d] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-[#c9f31d]/50'
+                  className='bg-[#c9f31d] hover:bg-white text-black hover:text-black px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-white/50'
                 >
                   Hire Me
                   <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
                 </Link>
-                
+
                 <Link
                   href='/projects'
-                  className='border-2 border-[#c9f31d] text-[#c9f31d] hover:bg-[#c9f31d] hover:text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2'
+                  className='border-2 border-[#c9f31d] text-[#c9f31d] hover:bg-white hover:text-black hover:border-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 inline-flex items-center gap-2'
                 >
                   Portfolio
                   <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -340,7 +367,7 @@ export default function Home() {
                   </svg>
                   <span className='text-sm'>shanzysaleem8@gmail.com</span>
                 </a>
-                
+
                 <a
                   href='tel:+923467394923'
                   className='flex items-center gap-2 hover:text-[#c9f31d] transition-colors'
@@ -370,7 +397,7 @@ export default function Home() {
                   className='object-cover'
                   priority
                 />
-                
+
                 {/* Badge on Image */}
                 <div className='absolute top-6 left-6 bg-white rounded-full px-4 py-2 shadow-lg'>
                   <div className='flex items-center gap-2'>
@@ -397,11 +424,19 @@ export default function Home() {
             >
               <div className='relative w-64 h-64'>
                 {/* Background Circle */}
-                <div className='absolute inset-0 rounded-full bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700' />
+                <motion.div
+                  className='absolute inset-0 rounded-full bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700'
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                />
                 {/* Asterisk Icon */}
-                <div className='absolute inset-0 flex items-center justify-center'>
+                <motion.div
+                  className='absolute inset-0 flex items-center justify-center'
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                >
                   <span className='text-[#c9f31d]' style={{ fontSize: '200px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', lineHeight: '1' }}>*</span>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -431,11 +466,15 @@ export default function Home() {
                   className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
-                    <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
+                    <motion.div
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'
+                    >
                       <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 10V3L4 14h7v7l9-11h-7z' />
                       </svg>
-                    </div>
+                    </motion.div>
                     <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
@@ -456,11 +495,15 @@ export default function Home() {
                   className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
-                    <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
+                    <motion.div
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                      className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'
+                    >
                       <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' />
                       </svg>
-                    </div>
+                    </motion.div>
                     <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
@@ -481,11 +524,15 @@ export default function Home() {
                   className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
-                    <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
+                    <motion.div
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                      className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'
+                    >
                       <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />
                       </svg>
-                    </div>
+                    </motion.div>
                     <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
@@ -506,11 +553,15 @@ export default function Home() {
                   className='group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#c9f31d] transition-all duration-300 cursor-pointer relative'
                 >
                   <div className='flex items-start justify-between mb-4'>
-                    <div className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'>
+                    <motion.div
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
+                      className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0'
+                    >
                       <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
                       </svg>
-                    </div>
+                    </motion.div>
                     <div className='w-8 h-8 rounded-full bg-[#c9f31d] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0'>
                       <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
@@ -570,8 +621,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Fashion</span>
-                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>E-Commerce</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>Fashion</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>E-Commerce</span>
                 </div>
               </Link>
             </motion.div>
@@ -599,8 +650,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Organic</span>
-                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>E-Commerce</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>Organic</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>E-Commerce</span>
                 </div>
               </Link>
             </motion.div>
@@ -628,8 +679,95 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Tech</span>
-                  <span className='px-3 py-1 bg-[#c9f31d] text-white text-sm rounded-full'>Business</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>Tech</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>Business</span>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Figma Project 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className='group cursor-pointer'
+            >
+              <Link href='https://www.figma.com/design/RAec0mgBA82umJunD44unO/Untitled?node-id=0-1&t=cuxC6YJvVVzckkBi-1' target='_blank' rel='noopener noreferrer'>
+                <div className='relative overflow-hidden rounded-2xl mb-4 aspect-[16/10] hover:shadow-2xl transition-all duration-300 group-hover:scale-105'>
+                  <Image
+                    src='/coffee-shop-figma.png'
+                    alt='Coffee Shop Design'
+                    fill
+                    className='object-cover'
+                  />
+                  <div className='absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                    <span className='px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white font-medium'>
+                      View Design
+                    </span>
+                  </div>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>Figma</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>UI/UX</span>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Figma Project 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className='group cursor-pointer'
+            >
+              <Link href='https://www.figma.com/design/bNxsmc7TxFiShDBGb3W3NK/Professional-Figma-UI-Cloning---Redesign-Assignment?t=cuxC6YJvVVzckkBi-1' target='_blank' rel='noopener noreferrer'>
+                <div className='relative overflow-hidden rounded-2xl mb-4 aspect-[16/10] hover:shadow-2xl transition-all duration-300 group-hover:scale-105'>
+                  <Image
+                    src='/saas-platform-figma.png'
+                    alt='SaaS Platform UI'
+                    fill
+                    className='object-cover'
+                  />
+                  <div className='absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                    <span className='px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white font-medium'>
+                      View Design
+                    </span>
+                  </div>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>SaaS</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>Wireframing</span>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Figma Project 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className='group cursor-pointer'
+            >
+              <Link href='https://www.figma.com/design/cRPkWHULHzUmv2ssIEvW9G/Design-Test-Shanzy-Saleem?node-id=0-1&t=MBQ14AmGAtPQi1QU-1' target='_blank' rel='noopener noreferrer'>
+                <div className='relative overflow-hidden rounded-2xl mb-4 aspect-[16/10] hover:shadow-2xl transition-all duration-300 group-hover:scale-105'>
+                  <Image
+                    src='/beauty-ecommerce-figma.png'
+                    alt='Beauty E-Commerce Design'
+                    fill
+                    className='object-cover'
+                  />
+                  <div className='absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                    <span className='px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white font-medium'>
+                      View Design
+                    </span>
+                  </div>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>E-Commerce</span>
+                  <span className='px-3 py-1 bg-[#c9f31d] text-black text-sm rounded-full'>Figma</span>
                 </div>
               </Link>
             </motion.div>
@@ -645,7 +783,7 @@ export default function Home() {
           >
             <Link
               href='/projects'
-              className='inline-flex items-center gap-2 bg-[#c9f31d] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-[#c9f31d]/50'
+              className='inline-flex items-center gap-2 bg-[#c9f31d] hover:bg-white text-black hover:text-black px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-white/50'
             >
               View All Portfolio
               <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -733,9 +871,9 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>Google Ads</h3>
+              <h3 className='text-2xl font-bold text-white mb-4'>Prototyping</h3>
               <p className='text-gray-400 leading-relaxed'>
-                By crafting highly targeted ad campaigns, I ensure your business reaches the right audience at the right time. Whether it&apos;s search ads, display ads, or retargeting strategies, my goal is to maximize your ROI and drive meaningful traffic.
+                I transform concepts into interactive, high-fidelity prototypes. This allows you to visualize the final product, test user flows, and gather feedback early in the design process, ensuring a polished and user-friendly experience.
               </p>
             </motion.div>
 
@@ -755,11 +893,54 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>Content Writing</h3>
+              <h3 className='text-2xl font-bold text-white mb-4'>User Research</h3>
               <p className='text-gray-400 leading-relaxed'>
-                I write high-quality, keyword-rich content that engages audience and improves your rankings. From blog posts to website copy, my content is designed to inform, persuade, and convert.
+                Understanding your users is key to success. I conduct in-depth user research to identify needs, behaviors, and pain points, informing design decisions that create meaningful and effective solutions for your target audience.
               </p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Workflow Process Section - Adding uniqueness as requested */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8 bg-black'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+          >
+            <p className='text-gray-400 text-sm font-medium mb-4'>How I Work</p>
+            <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
+              My <span className='text-[#c9f31d]'>Work Process</span> Used<br />For All Projects
+            </h2>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {[
+              { num: '01', title: 'Discovery', desc: 'Understanding your business goals & target audience.' },
+              { num: '02', title: 'Design', desc: 'Creating intuitive wireframes & high-fidelity prototypes.' },
+              { num: '03', title: 'Development', desc: 'Building robust, scalable, & clean code solutions.' },
+              { num: '04', title: 'Launch', desc: 'Testing, optimizing, and deploying your digital product.' },
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='relative group bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-[#c9f31d] transition-all duration-300'
+              >
+                <div className='text-5xl font-bold text-gray-800 group-hover:text-[#c9f31d]/20 transition-colors mb-4'>{step.num}</div>
+                <h3 className='text-xl font-bold text-white mb-2'>{step.title}</h3>
+                <p className='text-gray-400 text-sm'>{step.desc}</p>
+                {index < 3 && (
+                  <div className='hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-gray-700' />
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -784,7 +965,7 @@ export default function Home() {
               </p>
               <Link
                 href='/about'
-                className='inline-flex items-center gap-2 bg-[#c9f31d] hover:bg-[#0d6665] text-white px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-[#c9f31d]/50'
+                className='inline-flex items-center gap-2 bg-[#c9f31d] hover:bg-white text-black hover:text-black px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:shadow-white/50'
               >
                 Learn More
                 <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -809,11 +990,15 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
-                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'
+                >
                   <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
                   </svg>
-                </div>
+                </motion.div>
                 <h3 className='text-white font-bold mb-2'>SEO</h3>
                 <p className='text-3xl font-bold text-gray-400'>88%</p>
               </motion.div>
@@ -826,11 +1011,15 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
-                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                  className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'
+                >
                   <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01' />
                   </svg>
-                </div>
+                </motion.div>
                 <h3 className='text-white font-bold mb-2'>Figma</h3>
                 <p className='text-3xl font-bold text-gray-400'>98%</p>
               </motion.div>
@@ -843,11 +1032,15 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
-                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                  className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'
+                >
                   <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                   </svg>
-                </div>
+                </motion.div>
                 <h3 className='text-white font-bold mb-2'>UI/UX Design</h3>
                 <p className='text-3xl font-bold text-gray-400'>95%</p>
               </motion.div>
@@ -860,11 +1053,15 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
-                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
+                  className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'
+                >
                   <svg className='w-8 h-8 text-[#c9f31d]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />
                   </svg>
-                </div>
+                </motion.div>
                 <h3 className='text-white font-bold mb-2'>Web Development</h3>
                 <p className='text-3xl font-bold text-gray-400'>90%</p>
               </motion.div>
@@ -877,14 +1074,220 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='col-span-2 bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-[#c9f31d] transition-all duration-300'
               >
-                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'>
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 2 }}
+                  className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700'
+                >
                   <svg className='w-8 h-8 text-[#c9f31d]' fill='currentColor' viewBox='0 0 24 24'>
-                    <path d='M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z'/>
+                    <path d='M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z' />
                   </svg>
-                </div>
+                </motion.div>
                 <h3 className='text-white font-bold mb-2'>Next.js</h3>
                 <p className='text-3xl font-bold text-gray-400'>92%</p>
               </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section - Explicit User Request */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8 bg-black'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+          >
+            <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
+              <span className='text-xl'>💎</span>
+              <span className='text-sm font-medium text-white'>Pricing Plans</span>
+            </div>
+            <h2 className='text-3xl md:text-5xl font-bold'>
+              Affordable pricing, Book a free<br />
+              call & <span className='text-[#c9f31d]'>We can discuss</span> the Pricing!
+            </h2>
+          </motion.div>
+
+          {/* New Horizontal Pricing Cards */}
+          <div className='space-y-8'>
+            {/* Plan 1: Basic */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className='bg-[#0A0A0A] border border-gray-800 hover:border-[#c9f31d] rounded-3xl p-8 lg:p-10 transition-all duration-300 group'
+            >
+              <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12'>
+                {/* Left Side: Info */}
+                <div className='lg:col-span-5 flex flex-col justify-between'>
+                  <div>
+                    <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 border border-gray-700 mb-6'>
+                      <span className='w-2 h-2 rounded-full bg-[#c9f31d] animate-pulse'></span>
+                      <span className='text-sm font-medium text-gray-300'>Full UX/UI Revamp Design</span>
+                    </div>
+
+                    <div className='flex items-baseline gap-1 mb-6'>
+                      <span className='text-6xl font-bold text-white tracking-tight'>$299</span>
+                      <span className='text-xl text-gray-500 font-medium'>/Project</span>
+                    </div>
+
+                    <div className='w-full border-b-2 border-dashed border-gray-800 mb-6'></div>
+
+                    <p className='text-gray-400 text-lg leading-relaxed'>
+                      Best for businesses looking to redesign and optimize an existing website or app for better conversion.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Side: Features & CTA */}
+                <div className='lg:col-span-7 bg-gray-900/30 rounded-2xl p-6 lg:p-8'>
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 mb-8'>
+                    {[
+                      'UX Audit (identify weak points)',
+                      'UI Design Overhaul (visual appeal)',
+                      'Usability Testing (user feedback)',
+                      'Developer-ready Figma files',
+                      'Mobile Responsive Layouts',
+                      '2 Revisions Included'
+                    ].map((feature, i) => (
+                      <div key={i} className='flex items-start gap-3'>
+                        <svg className='w-5 h-5 text-[#c9f31d] mt-0.5 flex-shrink-0' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 13l4 4L19 7' />
+                        </svg>
+                        <span className='text-gray-300 text-sm md:text-base'>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link href='/contact' className='w-full'>
+                    <button className='w-full py-4 rounded-xl bg-[#c9f31d] hover:bg-white text-black font-bold text-lg transition-all duration-300 transform group-hover:scale-[1.01] shadow-lg'>
+                      Get Started With Free Audit
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Plan 2: Development (Standard) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className='bg-[#0A0A0A] border border-gray-800 hover:border-[#c9f31d] rounded-3xl p-8 lg:p-10 transition-all duration-300 group'
+            >
+              <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12'>
+                {/* Left Side: Info */}
+                <div className='lg:col-span-5 flex flex-col justify-between'>
+                  <div>
+                    <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 border border-gray-700 mb-6'>
+                      <span className='w-2 h-2 rounded-full bg-[#c9f31d] animate-pulse'></span>
+                      <span className='text-sm font-medium text-gray-300'>Landing Page / Funnel Design</span>
+                    </div>
+
+                    <div className='flex items-baseline gap-1 mb-6'>
+                      <span className='text-6xl font-bold text-white tracking-tight'>$599</span>
+                      <span className='text-xl text-gray-500 font-medium'>/Project</span>
+                    </div>
+
+                    <div className='w-full border-b-2 border-dashed border-gray-800 mb-6'></div>
+
+                    <p className='text-gray-400 text-lg leading-relaxed'>
+                      Best for startups and businesses focused on sales, high-performance landing pages, and conversions.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Side: Features & CTA */}
+                <div className='lg:col-span-7 bg-gray-900/30 rounded-2xl p-6 lg:p-8'>
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 mb-8'>
+                    {[
+                      'High-Converting Landing Page',
+                      'Interactive Prototypes',
+                      'A/B Tested CTA Placement',
+                      'Speed Optimization',
+                      'SEO Fundamentals Setup',
+                      '5 Revisions Included'
+                    ].map((feature, i) => (
+                      <div key={i} className='flex items-start gap-3'>
+                        <svg className='w-5 h-5 text-[#c9f31d] mt-0.5 flex-shrink-0' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 13l4 4L19 7' />
+                        </svg>
+                        <span className='text-gray-300 text-sm md:text-base'>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link href='/contact' className='w-full'>
+                    <button className='w-full py-4 rounded-xl bg-white hover:bg-[#c9f31d] text-black font-bold text-lg transition-all duration-300 transform group-hover:scale-[1.01] shadow-lg'>
+                      Get Started With Free Audit
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Plan 3: Premium (All in one) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className='bg-[#0A0A0A] border border-gray-800 hover:border-[#c9f31d] rounded-3xl p-8 lg:p-10 transition-all duration-300 group'
+            >
+              <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12'>
+                {/* Left Side: Info */}
+                <div className='lg:col-span-5 flex flex-col justify-between'>
+                  <div>
+                    <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 border border-gray-700 mb-6'>
+                      <span className='w-2 h-2 rounded-full bg-[#c9f31d] animate-pulse'></span>
+                      <span className='text-sm font-medium text-gray-300'>Complete Digital Solution</span>
+                    </div>
+
+                    <div className='flex items-baseline gap-1 mb-6'>
+                      <span className='text-6xl font-bold text-white tracking-tight'>$999</span>
+                      <span className='text-xl text-gray-500 font-medium'>/Project</span>
+                    </div>
+
+                    <div className='w-full border-b-2 border-dashed border-gray-800 mb-6'></div>
+
+                    <p className='text-gray-400 text-lg leading-relaxed'>
+                      The ultimate package for established businesses needing a full-scale web application or e-commerce store.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Side: Features & CTA */}
+                <div className='lg:col-span-7 bg-gray-900/30 rounded-2xl p-6 lg:p-8'>
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 mb-8'>
+                    {[
+                      'Full E-Commerce / Web App',
+                      'Admin Dashboard Included',
+                      'Payment Gateway Integration',
+                      'Advanced SEO & Analytics',
+                      '6 Months Support',
+                      'Unlimited Revisions'
+                    ].map((feature, i) => (
+                      <div key={i} className='flex items-start gap-3'>
+                        <svg className='w-5 h-5 text-[#c9f31d] mt-0.5 flex-shrink-0' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 13l4 4L19 7' />
+                        </svg>
+                        <span className='text-gray-300 text-sm md:text-base'>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link href='/contact' className='w-full'>
+                    <button className='w-full py-4 rounded-xl bg-white hover:bg-[#c9f31d] text-black font-bold text-lg transition-all duration-300 transform group-hover:scale-[1.01] shadow-lg'>
+                      Get Started With Free Audit
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -906,13 +1309,19 @@ export default function Home() {
                 I&apos;ve 120+ Clients<br />Positive<br /><span className='text-[#c9f31d]'>Feedback</span>
               </h2>
               <div className='flex gap-4'>
-                <button className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-[#c9f31d] hover:border-[#c9f31d] transition-all duration-300'>
-                  <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <button
+                  onClick={prevTestimonial}
+                  className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-white hover:border-white hover:text-black transition-all duration-300'
+                >
+                  <svg className='w-5 h-5 text-white hover:text-black' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
                   </svg>
                 </button>
-                <button className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-[#c9f31d] hover:border-[#c9f31d] transition-all duration-300'>
-                  <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <button
+                  onClick={nextTestimonial}
+                  className='w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-white hover:border-white hover:text-black transition-all duration-300'
+                >
+                  <svg className='w-5 h-5 text-white hover:text-black' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
                 </button>
@@ -927,29 +1336,26 @@ export default function Home() {
               viewport={{ once: true }}
               className='space-y-6'
             >
-              <div className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'>
-                <p className='text-gray-300 leading-relaxed mb-6'>
-                  &quot;Working with Shanzy was an absolute pleasure. The website designed for us is sleek, easy to navigate, and fully optimized for mobile devices. The content writing service helped us rank higher on search engines, attracting more potential clients. Shanzy&apos;s dedication and expertise truly set them apart.&quot;
-                </p>
-                <div className='flex items-center justify-between'>
-                  <div>
-                    <h4 className='text-white font-bold mb-1'>Emma L.</h4>
-                    <p className='text-[#c9f31d] text-sm'>CEO, Muskoka Limos</p>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentTestimonial}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'
+                >
+                  <p className='text-gray-300 leading-relaxed mb-6'>
+                    &quot;{testimonials[currentTestimonial].content}&quot;
+                  </p>
+                  <div className='flex items-center justify-between'>
+                    <div>
+                      <h4 className='text-white font-bold mb-1'>{testimonials[currentTestimonial].name}</h4>
+                      <p className='text-[#c9f31d] text-sm'>{testimonials[currentTestimonial].role}</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              <div className='bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8'>
-                <p className='text-gray-300 leading-relaxed mb-6'>
-                  &quot;I approached Shanzy for website development, and they didn&apos;t disappoint. The site is fast, secure, and visually appealing. It&apos;s exactly what I needed to stand out in my industry.&quot;
-                </p>
-                <div className='flex items-center justify-between'>
-                  <div>
-                    <h4 className='text-white font-bold mb-1'>Omar Sheikh</h4>
-                    <p className='text-[#c9f31d] text-sm'>Business Owner</p>
-                  </div>
-                </div>
-              </div>
+                </motion.div>
+              </AnimatePresence>
             </motion.div>
           </div>
         </div>
